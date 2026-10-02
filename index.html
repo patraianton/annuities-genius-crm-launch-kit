@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Annuities Genius CRM launch kit · test task · Anton Patrai</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--blue:#2563eb;--blue2:#3e7bff;--ink:#0f172a;--mute:#64748b;--line:#e5e7eb;--bg:#f8fafc;--card:#fff;--yellow:#fde047;--btn:#eab308;--soft:#eff6ff;--beige:#fbfbf9}
+  *{box-sizing:border-box;min-width:0}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Montserrat,ui-sans-serif,system-ui,sans-serif}
+  main{max-width:1120px;margin:0 auto;padding:32px 20px 60px}
+  header.top{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:26px}
+  header.top svg{height:40px;width:auto}
+  header.top .meta{color:var(--mute);font-size:13.5px}
+  h1{font-size:34px;line-height:1.15;margin:0 0 8px;font-weight:800;letter-spacing:-.01em}
+  h2{font-size:22px;margin:0 0 6px;font-weight:700}
+  h3{font-size:16px;margin:0 0 6px;font-weight:700}
+  .lead{color:var(--mute);font-size:16.5px;margin:0 0 16px}
+  section{margin:0 0 38px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+  .grid{display:grid;gap:14px}
+  .g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+  .msg{background:var(--ink);color:#fff;border-radius:18px;padding:24px 28px;font-size:22px;line-height:1.35;font-weight:600;text-wrap:balance}
+  .msg small{display:block;font-size:14px;font-weight:400;color:#cbd5e1;margin-top:10px;text-wrap:balance}
+  .msg small b{color:#fff;font-weight:700}
+  .msg .hl{color:var(--yellow)}
+  .msg u{text-decoration:none;border-bottom:3px solid var(--yellow)}
+  .msg .tbc{color:#cbd5e1;border-bottom-color:#94a3b8}
+  .tbc{border-bottom:2px dotted #94a3b8;color:#475569;cursor:help}
+  sup.k{display:inline-block;width:14px;height:14px;line-height:14px;text-align:center;border-radius:50%;background:var(--soft);color:var(--blue);font-size:9px;font-weight:800;vertical-align:top;margin-left:1px;transform:translateY(-2px)}
+  /* frames */
+  .frame{border:1px solid var(--line);border-radius:14px;overflow:clip;background:#fff}
+  .frame .bar{background:#f1f5f9;border-bottom:1px solid var(--line);padding:10px 16px;font-size:13px;color:var(--mute);display:grid;gap:4px}
+  .frame .bar b{color:var(--ink)}
+  .split{display:grid;grid-template-columns:minmax(0,680px) minmax(0,1fr);background:linear-gradient(90deg,#fff 0 680px,var(--beige) 680px)}
+  @media (max-width:900px){.split{grid-template-columns:minmax(0,1fr);background:#fff}}
+  .email{padding:24px 28px;font-size:15.5px;line-height:1.55}
+  .email p{margin:0 0 13px}
+  .email ul,.email ol{margin:0 0 13px;padding-left:20px}
+  .email li{margin:0 0 7px}
+  .email .btn{display:inline-block;background:var(--btn);color:#fff;font-weight:700;padding:12px 22px;border-radius:6px;text-decoration:none}
+  .email .sig{color:var(--mute);font-size:14px}
+  .email .seg{font-size:11.5px;color:var(--blue);font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+  .notes{border-left:1px solid var(--line);padding:22px 20px;font-size:13.5px;color:var(--mute);align-self:start;position:sticky;top:16px}
+  .notes h4{margin:0 0 10px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+  .notes div{padding:8px 0;border-top:1px dashed var(--line)}
+  .notes div:first-of-type{border-top:0}
+  .notes b{color:var(--ink);display:block;font-size:13.5px}
+  .notes b sup.k{vertical-align:middle;margin:0 4px 0 0;transform:none}
+  /* linkedin */
+  .two{display:grid;grid-template-columns:minmax(0,600px) minmax(0,1fr);gap:16px;align-items:start}
+  @media (max-width:900px){.two{grid-template-columns:minmax(0,1fr)}}
+  .li{padding:18px 20px;font-family:-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",sans-serif}
+  .li .who{display:flex;gap:10px;align-items:center;margin-bottom:12px}
+  .li .av{width:44px;height:44px;border-radius:50%;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center}
+  .li .av svg{width:22px;height:auto}
+  .li .who small{display:block;color:var(--mute);font-size:12.5px}
+  .li .txt{white-space:pre-line;font-size:14px;line-height:1.43}
+  .li .txt.rest{color:#334155}
+  .li .fold{display:flex;align-items:center;gap:8px;color:var(--mute);font-size:12.5px;margin:6px 0}
+  .li .fold::before,.li .fold::after{content:"";flex:1;border-top:1px dashed var(--line)}
+  .li .tags{color:var(--blue);font-size:14px;margin-top:8px}
+  .media{margin:12px 0 0;aspect-ratio:16/9;border-radius:10px;background:linear-gradient(135deg,#0f172a,#1e3a8a);color:#fff;padding:14px 16px;display:flex;flex-direction:column;justify-content:space-between}
+  .media .c{font-weight:700;font-size:13.5px}
+  .media ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px;font-size:12px}
+  .media ol li{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:3px 9px}
+  .media .play{font-size:12.5px;color:#cbd5e1}
+  .li .react{border-top:1px solid var(--line);margin-top:14px;padding-top:10px;color:var(--mute);font-size:13px;display:flex;gap:18px}
+  .side{font-size:13.5px;color:var(--mute)}
+  .side b{color:var(--ink);display:block}
+  /* webinar */
+  .web{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr)}
+  @media (max-width:800px){.web{grid-template-columns:minmax(0,1fr)}}
+  .web .hero{background:linear-gradient(135deg,#0f172a,#1e3a8a);color:#fff;padding:26px}
+  .web .hero .kicker{color:var(--yellow);font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+  .web .hero h3{font-size:21px;line-height:1.25;margin:8px 0 12px;font-weight:800;text-wrap:balance}
+  .web .hero .when{color:#cbd5e1;font-size:14px;margin-bottom:16px}
+  .web .hero .btn{display:inline-block;background:#fff;color:#1d4ed8;font-weight:800;padding:11px 20px;border-radius:10px}
+  .web .hero .rec{color:#cbd5e1;font-size:12.5px;margin-top:8px}
+  .web .hero .hosts{margin-top:16px;font-size:13.5px;color:#cbd5e1}
+  .web .hero .hosts div{margin:4px 0}
+  .web .hero .leave{margin-top:16px;font-size:13.5px;color:#e2e8f0;border-top:1px solid rgba(255,255,255,.15);padding-top:12px}
+  .web .hero .leave div{margin:4px 0}
+  .web .hero .tbc{border-bottom-color:#94a3b8;color:#cbd5e1}
+  .web .agenda{padding:22px 24px}
+  .web .agenda ol{list-style:none;margin:0;padding:0}
+  .web .agenda li{display:grid;grid-template-columns:52px minmax(0,1fr);gap:12px;padding:8px 0;border-top:1px solid var(--line);font-size:14.5px}
+  .web .agenda li:first-child{border-top:0}
+  .web .agenda li b{color:var(--blue);font-variant-numeric:tabular-nums}
+  .web .agenda .imo{margin-top:12px;font-size:13.5px;color:var(--mute)}
+  /* approach */
+  .find{display:grid;grid-template-columns:34px minmax(0,1fr);gap:12px;padding:11px 0;border-top:1px solid var(--line)}
+  .find:first-child{border-top:0}
+  .find .n{width:30px;height:30px;border-radius:8px;background:var(--soft);color:var(--blue);font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px}
+  .find p{margin:0;font-size:15px;max-width:74ch}
+  h4.ch{margin:0 0 6px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+  .fm{border-collapse:collapse;width:100%;font-size:13px;margin:10px 0 6px}
+  .fm th,.fm td{border:1px solid var(--line);padding:6px 8px;vertical-align:top;text-align:left}
+  .fm th{background:#f1f5f9;font-size:11.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--mute)}
+  .fm td.k{font-weight:700;white-space:nowrap}
+  .find>div:last-child p{max-width:none}
+  ul.plain{margin:0;padding-left:18px}
+  ul.plain li{margin:0 0 7px;font-size:15px}
+  ol.plain{margin:0;padding-left:20px}
+  ol.plain li{margin:0 0 8px;font-size:15px}
+  details.src{margin-top:12px;font-size:13.5px;color:var(--mute)}
+  details.src summary{cursor:pointer;font-weight:600}
+  .foot{border-top:1px solid var(--line);margin-top:34px;padding-top:14px;color:var(--mute);font-size:13px}
+  @media (max-width:600px){h1{font-size:28px}.msg{font-size:19px;padding:20px}.email,.web .agenda{padding:18px}}
+  @media print{*{-webkit-print-color-adjust:exact;print-color-adjust:exact}body{background:#fff}.card,.web,.li,.find,.frame{break-inside:avoid}h2{break-after:avoid}main{padding:0}.notes{position:static}details{display:block}details::details-content{content-visibility:visible;display:block}}
+</style>
+</head>
+<body>
+<main>
+
+<header class="top">
+  <svg viewBox="0 0 168 53" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Annuities Genius"><path fill-rule="evenodd" clip-rule="evenodd" d="M49.8049 27.4471L48.9092 24.2124L48.2113 21.5458H48.1617L47.5002 24.1907L46.5936 27.4544L49.8049 27.4471ZM50.6767 30.7063L45.7104 30.7167L44.7792 34.1038L39.7389 34.1145L45.1893 17.7966L51.2424 17.7838L56.7864 34.0784L51.5981 34.0893L50.6767 30.7063ZM69.6242 22.5626C70.3418 23.3023 70.7025 24.3476 70.7056 25.6983L70.7233 34.0489L65.7327 34.0592L65.7177 27.0426C65.7163 26.3675 65.6075 25.8905 65.3932 25.6104C65.1787 25.3308 64.8651 25.1918 64.4535 25.1925C63.9265 25.1935 63.5151 25.3883 63.2194 25.7755C62.9239 26.1633 62.7769 26.761 62.7787 27.568L62.7924 34.0655L57.8018 34.0763L57.7755 21.7233L62.2721 21.7136L62.4008 24.2576C62.7613 23.3515 63.3031 22.6586 64.027 22.179C64.7507 21.6997 65.6231 21.4593 66.6448 21.457C67.913 21.4543 68.9061 21.823 69.6242 22.5626V22.5626ZM84.6703 22.5309C85.3879 23.2704 85.7488 24.3159 85.7517 25.6665L85.7694 34.0172L80.7788 34.0273L80.7638 27.0109C80.7624 26.3357 80.654 25.8585 80.4397 25.5786C80.2244 25.2989 79.9108 25.1596 79.4996 25.1607C78.9721 25.1618 78.5612 25.3565 78.2659 25.7437C77.97 26.1315 77.823 26.729 77.8247 27.5358L77.8385 34.0338L72.8479 34.0445L72.8216 21.6909L77.3182 21.6818L77.4469 24.2258C77.8072 23.3198 78.3494 22.6268 79.0731 22.1473C79.7968 21.668 80.6692 21.4274 81.6909 21.4252C82.9587 21.4225 83.9523 21.7908 84.6703 22.5309V22.5309ZM100.737 21.6318L100.764 33.9852L96.267 33.9947L96.1385 31.5491C95.4013 33.3458 93.9945 34.2466 91.9191 34.2508C89.1847 34.2569 87.8149 32.8268 87.8086 29.961L87.7912 21.6593L92.782 21.6488L92.7969 28.7146C92.7984 29.3736 92.9021 29.8388 93.1084 30.1101C93.3152 30.3814 93.6407 30.5166 94.0856 30.5154C94.6124 30.5143 95.024 30.316 95.3193 29.92C95.615 29.5239 95.7622 28.9306 95.7603 28.1403L95.7464 21.6423L100.737 21.6318V21.6318ZM107.943 33.9701L102.953 33.9804L102.926 21.6272L107.917 21.6166L107.943 33.9701V33.9701ZM103.269 20.0203C102.84 19.6754 102.624 19.1162 102.623 18.342C102.621 17.551 102.834 16.9825 103.261 16.6357C103.689 16.2889 104.405 16.1147 105.41 16.1124C106.414 16.1105 107.131 16.2815 107.56 16.6264C107.989 16.972 108.205 17.5394 108.206 18.33C108.208 19.1044 107.995 19.6645 107.567 20.0115C107.14 20.3583 106.424 20.5327 105.42 20.5348C104.414 20.5369 103.698 20.3657 103.269 20.0203ZM119.529 33.3029C119.134 33.5673 118.599 33.7827 117.925 33.9486C117.249 34.1148 116.59 34.1985 115.948 34.1999C114.301 34.2033 113.065 33.8769 112.24 33.2199C111.415 32.5628 111.001 31.4929 110.998 30.0104L110.988 25.0446L108.986 25.0484L108.979 21.6145L110.98 21.6099L110.975 18.9174L115.962 17.523L115.971 21.5996L119.356 21.592L119.363 25.0267L115.978 25.0339L115.987 29.2091C115.988 29.7858 116.117 30.1972 116.373 30.4437C116.628 30.6902 117.02 30.813 117.547 30.8117C118.173 30.8105 118.724 30.6693 119.201 30.3881L119.529 33.3029V33.3029ZM125.887 33.9318L120.896 33.9421L120.87 21.5891L125.861 21.5786L125.887 33.9318ZM121.212 19.9823C120.783 19.6373 120.568 19.0779 120.566 18.3039C120.565 17.5131 120.778 16.9444 121.205 16.5976C121.633 16.251 122.349 16.0767 123.354 16.0746C124.358 16.0722 125.075 16.2434 125.504 16.5886C125.933 16.9339 126.148 17.5014 126.15 18.2919C126.152 19.0663 125.939 19.6264 125.511 19.9734C125.084 20.3202 124.367 20.4946 123.363 20.4967C122.358 20.4988 121.641 20.3276 121.212 19.9823V19.9823ZM132.803 25.171C132.499 25.4848 132.298 25.9959 132.201 26.704L135.784 26.6966C135.7 26.0215 135.522 25.5195 135.249 25.1908C134.977 24.8616 134.585 24.6978 134.074 24.6991C133.531 24.7001 133.107 24.8574 132.803 25.171V25.171ZM140.334 28.861L132.205 28.8783C132.306 29.5698 132.529 30.0554 132.876 30.3345C133.222 30.614 133.708 30.7528 134.334 30.7514C135.339 30.7495 135.956 30.3526 136.185 29.562L140.215 30.7143C139.904 31.8351 139.226 32.689 138.182 33.2756C137.137 33.8626 135.857 34.1579 134.342 34.1608C132.102 34.1661 130.387 33.6138 129.199 32.5041C128.011 31.3947 127.415 29.8114 127.41 27.752C127.406 25.7098 127.983 24.1278 129.142 23.0047C130.301 21.8823 131.934 21.3186 134.043 21.3142C136.102 21.3098 137.684 21.8543 138.79 22.9475C139.895 24.0405 140.45 25.5338 140.455 27.4279C140.456 28.0208 140.415 28.4989 140.334 28.861ZM143.704 33.6718C142.674 33.3612 141.821 32.8526 141.143 32.1449L143.485 29.4228C143.915 29.9322 144.442 30.3225 145.069 30.5932C145.696 30.8637 146.387 30.9976 147.145 30.996C147.573 30.9951 147.919 30.9453 148.183 30.8456C148.446 30.7463 148.578 30.5978 148.577 30.4001C148.576 30.219 148.428 30.059 148.131 29.9191C147.834 29.7801 147.307 29.6289 146.549 29.4657C144.736 29.1235 143.43 28.6322 142.63 27.9918C141.829 27.3509 141.428 26.5202 141.426 25.4987C141.424 24.791 141.658 24.1148 142.126 23.471C142.594 22.8281 143.301 22.3037 144.247 21.8978C145.194 21.4923 146.367 21.2883 147.767 21.2852C150.451 21.2795 152.389 21.9592 153.577 23.3234L151.334 25.7742C150.558 24.8698 149.437 24.4193 147.971 24.4225C147.461 24.4235 147.074 24.486 146.81 24.6103C146.547 24.7346 146.415 24.8955 146.416 25.0928C146.416 25.2579 146.561 25.4013 146.85 25.5241C147.137 25.6472 147.62 25.7662 148.296 25.8794C150.157 26.1557 151.505 26.6098 152.338 27.2422C153.171 27.8748 153.589 28.7506 153.591 29.871C153.594 31.1062 153.077 32.1245 152.041 32.9254C151.005 33.7263 149.474 34.1291 147.448 34.1333C145.982 34.1366 144.734 33.9825 143.704 33.6718V33.6718Z" fill="#11192B"/><path fill-rule="evenodd" clip-rule="evenodd" d="M33.8588 24.7171L24.1184 31.9068L33.8588 39.0968V46.2816L14.3849 31.9068L33.8588 17.5319V24.7171ZM14.3851 21.6173L24.1254 14.4276L14.3851 7.23766V0.0527954L33.8588 14.4276L14.3851 28.8026V21.6173ZM24.1254 49.1325L14.3851 41.9426V34.7577L33.8588 49.1325H24.1254Z" fill="#3E7BFF"/><path fill-rule="evenodd" clip-rule="evenodd" d="M43.985 41.1677C43.6563 41.4597 43.4903 41.8427 43.4866 42.3157C43.483 42.8021 43.643 43.1933 43.9671 43.4903C44.291 43.787 44.7087 43.9374 45.2208 43.9412C45.7452 43.9454 46.1719 43.8016 46.5004 43.5094C46.8289 43.2179 46.9951 42.829 46.9989 42.3426C47.0024 41.8694 46.8422 41.4845 46.5181 41.1871C46.1942 40.8906 45.7698 40.74 45.2452 40.736C44.7335 40.732 44.3135 40.876 43.985 41.1677V41.1677ZM47.4323 50.8775C47.92 50.6571 48.1655 50.3742 48.1682 50.0288C48.1703 49.7601 48.0597 49.5577 47.837 49.4219C47.6138 49.2856 47.2464 49.2155 46.7349 49.2118L44.1249 49.1918C43.0626 49.1834 42.5296 49.4673 42.5254 50.0431C42.5225 50.4011 42.757 50.6813 43.2289 50.8834C43.7007 51.0853 44.4101 51.1898 45.3569 51.1972C46.2524 51.2039 46.9442 51.0975 47.4323 50.8775ZM49.4808 47.7934C50.0466 48.2582 50.3263 48.9192 50.3198 49.7765C50.3118 50.7999 49.832 51.5963 48.881 52.1648C47.9295 52.7333 46.68 53.0116 45.1319 52.9996C43.5324 52.9874 42.3475 52.767 41.5767 52.339C40.8056 51.911 40.4233 51.332 40.429 50.6028C40.4323 50.1677 40.5821 49.7912 40.879 49.4738C41.1756 49.156 41.6126 48.9289 42.1893 48.793C41.7554 48.6105 41.412 48.3549 41.1588 48.0268C40.9051 47.6983 40.7804 47.3107 40.784 46.8625C40.7873 46.4019 40.9247 46.0065 41.196 45.6757C41.4673 45.3455 41.8402 45.0988 42.3149 44.9362C41.8305 44.6512 41.4625 44.2868 41.2101 43.843C40.9573 43.3998 40.8334 42.8902 40.838 42.3144C40.8456 41.3036 41.2452 40.5103 42.0366 39.9338C42.828 39.358 43.9017 39.0749 45.2581 39.0854C45.9489 39.0907 46.5942 39.1792 47.1944 39.3496C47.3665 38.5962 47.6942 38.0071 48.1773 37.582C48.6606 37.157 49.3111 36.9736 50.1296 37.031L50.4607 38.9142C50.3711 38.9007 50.2369 38.8934 50.0579 38.8919C49.5843 38.8885 49.1902 38.9687 48.8755 39.1325C48.5607 39.2966 48.3382 39.5189 48.2084 39.799C48.6793 40.0842 49.0383 40.4455 49.2844 40.8821C49.5304 41.3192 49.6514 41.8191 49.6472 42.3821C49.6394 43.3801 49.2398 44.1673 48.4486 44.7434C47.6574 45.3196 46.577 45.6021 45.208 45.5916C44.581 45.5865 44.0058 45.5247 43.4821 45.4056C42.982 45.5299 42.7305 45.8156 42.7269 46.2633C42.725 46.5197 42.8194 46.7151 43.0104 46.8509C43.2012 46.987 43.4695 47.056 43.8149 47.0585L47.0584 47.0838C48.1074 47.0918 48.9148 47.3282 49.4808 47.7934V47.7934ZM54.3648 41.6506C53.9843 42.0189 53.7402 42.5672 53.6323 43.2955L58.104 43.3298C58.0069 42.6126 57.7682 42.0637 57.3873 41.6832C57.0064 41.3032 56.5088 41.1101 55.8947 41.1057C55.2549 41.1007 54.7448 41.2824 54.3648 41.6506ZM60.4314 45.1905L53.6373 45.1381C53.8956 46.4966 54.6897 47.1807 56.0208 47.1908C56.5708 47.195 57.0257 47.0962 57.3856 46.8943C57.7452 46.6924 57.9972 46.3998 58.1408 46.0168L60.2846 46.8205C59.9714 47.5858 59.4517 48.1673 58.7259 48.5648C57.9999 48.9623 57.093 49.1569 56.0057 49.1487C54.4191 49.1363 53.1942 48.6885 52.331 47.8054C51.4673 46.9225 51.042 45.6938 51.0542 44.1204C51.0662 42.5466 51.4978 41.3249 52.3491 40.4546C53.2001 39.5847 54.3934 39.1554 55.9289 39.1674C57.4127 39.179 58.5514 39.6164 59.3447 40.4796C60.1376 41.3432 60.5284 42.5683 60.5162 44.1545C60.5132 44.5128 60.485 44.8582 60.4314 45.1905V45.1905ZM70.661 40.1826C71.2899 40.7892 71.5999 41.6551 71.5913 42.7809L71.5429 49.0757L68.9135 49.0559L68.956 43.5286C68.9671 42.07 68.4033 41.336 67.2646 41.3272C66.6505 41.3228 66.1274 41.5362 65.6954 41.9676C65.2632 42.3998 65.0441 43.0636 65.0372 43.9591L64.9982 49.0256L62.3691 49.0054L62.4427 39.4093L64.8035 39.4274L64.867 41.1362C65.1915 40.512 65.6363 40.0417 66.2023 39.726C66.7674 39.4108 67.4213 39.2555 68.1635 39.2614C69.1998 39.2692 70.0322 39.5765 70.661 40.1826V40.1826ZM76.4769 49.1138L73.8476 49.0936L73.9212 39.4976L76.5506 39.5176L76.4769 49.1138ZM73.6356 36.7124C73.6429 35.7657 74.1902 35.2963 75.2779 35.3047C76.3653 35.3131 76.9054 35.7908 76.8982 36.7374C76.8911 37.6719 76.3436 38.1343 75.2561 38.1257C74.1685 38.1175 73.6284 37.6466 73.6356 36.7124V36.7124ZM88.0274 39.6059L87.954 49.2019L85.6123 49.1838L85.5288 47.5326C84.9054 48.7562 83.7811 49.3619 82.1562 49.3493C81.1197 49.3413 80.2999 49.0568 79.6965 48.4956C79.0929 47.9343 78.7957 47.0653 78.8047 45.8877L78.8535 39.5353L81.4829 39.5557L81.4394 45.2366C81.4335 45.9788 81.5702 46.5041 81.8495 46.8135C82.1284 47.1227 82.5431 47.2794 83.0933 47.2838C83.7586 47.2886 84.3008 47.0785 84.7201 46.6532C85.1391 46.2278 85.3521 45.5863 85.3584 44.7291L85.398 39.5855L88.0274 39.6059V39.6059ZM89.6376 47.5643L91.1851 46.0021C91.4366 46.5544 91.8017 46.9443 92.2798 47.1719C92.7578 47.3997 93.3486 47.516 94.0525 47.5214C94.6154 47.5256 95.0511 47.4522 95.3593 47.3008C95.6674 47.1498 95.823 46.9401 95.8247 46.6713C95.8266 46.4537 95.6842 46.2669 95.3971 46.1115C95.1104 45.9554 94.6156 45.8048 93.9133 45.6587C92.4438 45.3531 91.4139 44.9581 90.8225 44.4737C90.2315 43.9894 89.9387 43.3376 89.945 42.5186C89.9493 41.9813 90.1192 41.4773 90.4557 41.0064C90.792 40.5357 91.2875 40.1586 91.9422 39.8758C92.5969 39.5929 93.3785 39.4549 94.2871 39.4619C95.3618 39.4701 96.2304 39.64 96.8935 39.9713C97.5562 40.3027 98.1087 40.8222 98.5512 41.5291L96.9097 42.8987C96.6317 42.3849 96.2859 42.0046 95.8722 41.7581C95.4579 41.5118 94.9376 41.3863 94.3106 41.3814C93.7859 41.3774 93.3663 41.4639 93.0516 41.6405C92.7366 41.8176 92.5782 42.0338 92.5761 42.2896C92.574 42.5582 92.7261 42.7832 93.0317 42.9647C93.3375 43.1464 93.8799 43.3168 94.6593 43.4764C96.0516 43.7687 97.0372 44.1442 97.6162 44.6027C98.1948 45.0614 98.4812 45.6936 98.4749 46.4995C98.4682 47.3955 98.0814 48.112 97.3163 48.6502C96.5507 49.1882 95.4705 49.4515 94.0759 49.441C91.9391 49.4242 90.4597 48.7989 89.6376 47.5643V47.5643Z" fill="#11192B"/></svg>
+  <div class="meta">Annuities Genius CRM launch kit (test task) · Head of Growth · Anton Patrai · October 2026</div>
+</header>
+
+<h1>CRM launch kit: a launch email, a social post, a webinar agenda, plus a note to IMO desks.</h1>
+<p class="lead">One message across all four, in AG's voice. The note to IMO desks goes out a week before the email; a short note on how the kit was made closes it. A dotted underline on the page (square brackets in the markdown) marks a fact to confirm with the team; the full list is at the end of "How this was made". Feature names and flows are my proposal for release one.</p>
+
+<section>
+  <div class="msg">The case doesn't end when you hit <span class="hl">Open in mail</span>. Email, calls, texts, meetings: the whole conversation now lives <u>on the case</u> - where the quote already does.
+    <small>Three readers, one message: the agent who pays for their own seat · the agent who came through an IMO · the IMO's Case Design desk (its own note, below).</small>
+  </div>
+</section>
+
+<section>
+  <h2>1 · Launch email</h2>
+  <p class="lead">To agent seats, in AG's announcement order: the pain, what's new, where to find it, one call to action. Solo agents get it on launch day; agents on an IMO's Enterprise account get it after their IMO has received the note in section 4. Desk seats get section 4 instead; seats on an agency's account get no price line.</p>
+  <div class="frame">
+    <div class="bar"><span><b>From:</b> Annuities Genius Team</span><span><b>Subject:</b> New in Annuities Genius: email, calls, texts, meetings - all on the case</span><span><b>Preview:</b> Stop rebuilding the story before every callback. Live demo Wednesday.</span></div>
+    <div class="split">
+      <div class="email">
+        <p>Hi [First name],</p>
+        <p>You know the moment. The case is solved, the report looks great, you hit <b>"Open in mail"<sup class="k">1</sup></b> - and from there the conversation happens somewhere else. Your inbox, your phone, a calendar invite, a text. Three weeks later you're rebuilding the story before you call back.</p>
+        <p>So we fixed it. Meet <b><span class="tbc" title="feature name: my proposal">Client Conversations</span></b>: starting [date], your Annuities Genius CRM keeps the whole conversation on the case.<sup class="k">2</sup></p>
+        <ul>
+          <li><b>Email from the case.</b> Send the report and the follow-up without leaving Annuities Genius. Every email you send is saved on the case.</li>
+          <li><b>Calls, texts, meetings: all from the case.</b> Call from your computer. Text any client <span class="tbc" title="today: website-lead chat only, from one shared number">from your own number</span> - until now, texting was for website leads only. Send your booking link; the meeting and its reminder land on the case. All of it is saved on the case automatically.</li>
+          <li><b>Follow-ups that don't slip.</b> GrantAI drafts each follow-up from the illustration you sent and your call notes, and it waits on the case for you to edit, send, or skip.</li>
+          <li><b>One Client Profile, one timeline.</b> The timeline you already have - reports, illustrations, the E-App - now shows every email, every call, every text next to them, dated.</li>
+          <li><span class="seg">Agents on an IMO's Enterprise account only</span><sup class="k">3</sup><br><b>Case Design with the whole story.</b><sup class="k">4</sup> Click Request Case Design as you do today and <span class="tbc" title="the agent picks what goes with the case: to confirm">pick the emails and call notes that go with it</span> - [IMO name]'s desk designs for what the client actually asked. Nothing changes in the tools [IMO name] gives you.</li>
+        </ul>
+        <p><b>Getting started.</b> Every client you've quoted in Annuities Genius is already here.</p>
+        <ol>
+          <li>Connect your email once - that switches on email and meetings.</li>
+          <li>Pick a local number to call from - or <span class="tbc" title="porting time: to confirm">bring your office line over</span>.<sup class="k">5</sup></li>
+          <li>Texting switches on once your number clears the registration every US business texting line needs.</li>
+        </ol>
+        <p>Already on Redtail or Wealthbox? Keep them for your book<sup class="k">6</sup> - bring any contact in with one click, as you do today.</p>
+        <p><b>You stay in control:</b></p>
+        <ul>
+          <li>Nothing goes to a client without your click: GrantAI drafts, you decide.</li>
+          <li><span class="tbc" title="plans: in-platform texting sat on the mid and upper plans only in 2023-2025">Email and meetings come with every plan.</span> Calls and texts: <span class="tbc" title="pricing: my proposal, to confirm">N minutes and N texts a month included, then $X a minute and $Y a text</span>.</li>
+        </ul>
+        <p><b>Where to find it:</b> <span class="tbc" title="placement: my proposal">open any client → Case → <b>Client Conversations</b></span>.</p>
+        <p>See one client go from first lead to E-App, live: <b>Wednesday, [date], at 11 AM PT (2 PM ET)</b>. Bring your questions on texting rules and your data - the live Q&amp;A is for them.</p>
+        <p><a class="btn" href="#">Save My Seat</a></p>
+        <p>Questions? Give us a call at 949-600-7707.</p>
+        <p class="sig">Best,<br>Annuities Genius Team</p>
+      </div>
+      <aside class="notes">
+        <h4>Side notes: why it reads this way</h4>
+        <div><b><sup class="k">1</sup>Hook = AG's own "Open in mail" moment</b>That's where the GrantAI 2.0 demo hands off to the inbox. Current users know that moment.</div>
+        <div><b><sup class="k">2</sup>No competitor named</b>The copy sells the one thing no outside tool can have: the quote and the case are already here.</div>
+        <div><b><sup class="k">3</sup>Segmented send</b>Solo agents get the short version. The Case Design line goes only to agents on an IMO's Enterprise account, after their IMO has heard.</div>
+        <div><b><sup class="k">4</sup>Desk line = send, not watch</b>Request Case Design already exists; attaching the conversation to it is the new part.</div>
+        <div><b><sup class="k">5</sup>Honest about setup</b>Calling starts with a new local number; the time to move an existing one is to confirm. Texting waits for the one-time registration (A2P 10DLC: Twilio quotes up to 5 business days per campaign). Pulling Gmail replies back needs Google's yearly security assessment, which takes several weeks.</div>
+        <div><b><sup class="k">6</sup>Redtail / Wealthbox: keep them</b>Today's import is one-way, so "keep them" is what the product can honestly support. Whether conversation history can go back to Redtail is answered live at 0:04, not promised in the email.</div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>2 · Social post (LinkedIn, mirrored to Facebook)</h2>
+  <p class="lead">For prospects as well as users: a pain every agent shares, in AG's LinkedIn format.</p>
+  <div class="two">
+    <div class="frame">
+      <div class="li">
+        <div class="who"><div class="av"><svg viewBox="13 0 22 50" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M33.8588 24.7171L24.1184 31.9068L33.8588 39.0968V46.2816L14.3849 31.9068L33.8588 17.5319V24.7171ZM14.3851 21.6173L24.1254 14.4276L14.3851 7.23766V0.0527954L33.8588 14.4276L14.3851 28.8026V21.6173ZM24.1254 49.1325L14.3851 41.9426V34.7577L33.8588 49.1325H24.1254Z" fill="#3E7BFF"/></svg></div><div><b>Annuities Genius</b><small>2,721 followers · 1d · 🌐</small></div></div>
+        <div class="txt">Quote in one app. Email in another. Texts on your phone. Call notes... somewhere. 😅
+
+So, we fixed it.</div>
+        <div class="fold">…see more</div>
+        <div class="txt rest">New in Annuities Genius: <span class="tbc" title="feature name: my proposal">Client Conversations</span> 📨 Email, call, text, book a meeting - right from the client's case.
+
+✉️ Every email, every call, every text saved on the case
+🤖 GrantAI drafts the follow-up. You approve.
+
+The same case you already quote in - now with the email, the call, and the text on it. No sticky notes. No lost follow-ups. Just a faster path from first lead to signed E-App.
+
+Live demo Wednesday, [date], 11 AM PT - link in the first comment 👇
+
+Where do your follow-ups live today?</div>
+        <div class="tags">#Annuities #InsuranceAgents #FinancialAdvisors #InsurTech #AnnuitiesGenius</div>
+        <div class="media"><div class="c">Margaret · TX · IRA rollover</div><ol><li>Lead</li><li>Quote</li><li>Report emailed</li><li>Call</li><li>E-App sent</li></ol><div class="play">▶ screen recording of one client's timeline</div></div>
+        <div class="react"><span>👍 ❤️ 💡</span><span>Like</span><span>Comment</span><span>Repost</span></div>
+      </div>
+    </div>
+    <div class="side"><b>Format</b>Built from AG's own posts: the "New in Annuities Genius:" opener from the September 29 post, emoji bullets, "No … No … Just …", a closing question. Pain in the first two lines. Margaret is an invented client.</div>
+  </div>
+</section>
+
+<section>
+  <h2>3 · Webinar agenda (registration page)</h2>
+  <p class="lead">AG's Wednesday masterclass slot: 30 minutes, live, no slides.</p>
+  <div class="frame web">
+    <div class="hero">
+      <div class="kicker">Live Masterclass</div>
+      <h3>Watch Us Take a Client from Lead to E-App - Without Leaving Annuities Genius (Live Demo)</h3>
+      <div class="when">Wednesday, [date] · 11 AM PT / 1 PM CT / 2 PM ET · 30 minutes · Live, no slides, no fluff</div>
+      <span class="btn">Save My Seat</span>
+      <div class="rec">Can't make it live? Register anyway to get the recording.</div>
+      <div class="hosts"><div>Meet your hosts: Danny (Head of Sales) and Oleg Shovkun (CTO).</div><div>Bring your toughest case - age, state, amount, goal, no names - and we'll build it live from the chat, on the clock. <span class="tbc" title="offer to confirm">Build yours and next month is on us.</span></div><div>Everyone is welcome - you don't need to be an Annuities Genius customer.</div></div>
+      <div class="leave"><b>What you'll get</b><div>✓ The "first three cases in Client Conversations" checklist</div><div>✓ A ready-to-use follow-up plan for the first month - from first call to signed E-App</div></div>
+    </div>
+    <div class="agenda">
+      <ol>
+        <li><b>0:00</b><span>Welcome &amp; poll: where do your follow-ups live today?</span></li>
+        <li><b>0:02</b><span><span class="tbc" title="founder slot: optional">David Novak - why the conversation belongs on the case</span> (optional)</span></li>
+        <li><b>0:04</b><span>"I already have a CRM": what stays in Redtail or Wealthbox, and what lives on the case; what it costs; the number clients see; calls from your cell</span></li>
+        <li><b>0:07</b><span><b>LIVE:</b> your case arrives as a new lead → first call → quote → report emailed from the case</span></li>
+        <li><b>0:14</b><span>GrantAI drafts the follow-up email and a text reminder - you edit, send, or skip</span></li>
+        <li><b>0:17</b><span>Meeting booked → notes on the case → E-App prefilled (FireLight, where your IMO has it switched on)</span></li>
+        <li><b>0:20</b><span>Working with your IMO's Case Design desk: Request Case Design with the conversation attached</span></li>
+        <li><b>0:22</b><span>Plans, free trials, <span class="tbc" title="offer to confirm">attendee offer</span>, next Wednesday's masterclass</span></li>
+        <li><b>0:23</b><span>Live Q&amp;A: texting rules, your data and what happens if you leave, and your questions</span></li>
+      </ol>
+      <div class="imo">IMO admins and Case Design desks: a separate walkthrough on [date] - the desk view. [Book a time]</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>4 · Note for IMO admins and Case Design desks</h2>
+  <p class="lead">Goes out a week before the agents' email, so desks hear it from us first; agents on an IMO's account get section 1 after their IMO has.</p>
+  <div class="frame" style="max-width:680px">
+      <div class="bar"><span><b>To:</b> IMO admins and Case Design desks on Enterprise accounts</span><span><b>Subject:</b> New for your Case Design desk: what the client said, sent with the case</span></div>
+      <div class="email">
+        <p>Hi [First name],</p>
+        <p>You're hearing this a week before your agents do. From [date], agents on Annuities Genius can email and call clients and book meetings from the client's case, with texting <span class="tbc" title="number per agent: to confirm">from the agent's own number</span> as each one clears registration.</p>
+        <p>What it means for your desk:</p>
+        <ul>
+          <li>A Case Design request can now arrive with the client's emails, call notes, and questions attached, so your desk sees what the client asked next to the numbers.</li>
+          <li>Designed cases that stall after the illustration are production your agency never sees. Now the follow-up sits on the case <span class="tbc" title="conversation data inside Team Activity: to confirm">and Team Activity shows which designed cases got one</span>.</li>
+          <li>Nothing changes in the tools you give your agents today. <span class="tbc" title="agency-level switch: to confirm">You decide whether calling and texting are switched on for your agency's account, and who pays for them</span>.</li>
+        </ul>
+        <p>For your compliance team: we'd like to walk through texting consent, opt-outs, call recording and message retention with you before your agents' email goes out. Your firm's policies still apply.</p>
+        <p>Your agents' launch email goes out on [date]. Want it to come from you? <span class="tbc" title="to confirm">We'll send it co-signed by [IMO name], or give you the copy to send under your own name</span>. Or book a walkthrough for your desk: <b>[Book a time]</b></p>
+        <p class="sig">Best,<br>Annuities Genius Team</p>
+      </div>
+    </div>
+</section>
+
+<section>
+  <h2>How this was made</h2>
+  <p class="lead">Built September 30 to October 1 by research and writing agents I run. Steps one to four below say what was read and what it changed; sources are linked in each step and listed below.</p>
+  <p class="lead">Four review rounds on the night of September 30, each by six simulated reader roles (an annuity agent, an IMO owner, the hiring manager, AG's house voice, a design critic, a fact-checker), all from one model family and all reading the same research folder. A separate audit on October 1 found three existing features that the research had called missing; this version carries its corrections.</p>
+  <p class="lead">After the rounds I wrote down what had slipped through as rules, with a program that checks a draft against them: a number with no source, a promise in AG's name with no owner, a line cut in review that came back, a sentence on this page that is missing from its text file.</p>
+  <p class="lead">On October 2 it gave 189 findings on the October 1 version of this kit; after cuts and rewrites it gives none.</p>
+  <p class="lead">The same day an agent on another model family (OpenAI's) tried to overturn the nine product facts in the research table: six held, two were narrowed to what their source shows, one could not be checked from public pages.</p>
+  <p class="lead">What none of this catches: a false sentence with no number and no flagged word. The copy was written and reviewed by one model family, and no annuity agent has read it.</p>
+  <p class="lead">The rules, the program and the record of this run: <a href="https://github.com/patraianton/ag-growth-rules">github.com/patraianton/ag-growth-rules</a> (<a href="https://github.com/patraianton/ag-growth-rules/blob/HEAD/process/runs/2026-10-02-ag-kit/README.md">this run</a>).</p>
+  <div class="card">
+    <div class="find"><div class="n">1</div><p><b>Step one: what the CRM does today.</b> I went through the public record: all 93 help-center articles, the 103 videos and the Shorts on AG's channel, 166 site pages and 65 snapshots of the pricing page since 2019, 54 posts and articles by the company, its founder, and its CTO. Full audit, every claim linked to its source: <a href="https://patraianton.github.io/annuities-genius-crm-launch-kit/crm-audit.html">crm-audit.html</a>. What it showed: AG has had a CRM since 2019. The Client Profile is a case file: reports, illustrations, documents, notes, the E-App. The conversation leaves it. In the GrantAI 2.0 demo the email opens in the agent's own mail app, and the call happens off-platform: <i>"after I send it, what do I do next? I guess I'll call the guy and let him know there's something cool waiting in his mailbox."</i> Texting exists for website leads, from one shared number; calls, a calendar, and inbox sync don't. So the launch says "the conversation stays on the case", not "we built a CRM"; texting moves from website leads to every client.</p></div>
+    <div class="find"><div class="n">2</div><div><p><b>Step two: what GoHighLevel users blame it for, by the six components in the brief.</b> GoHighLevel is the tool the brief names. I read 3,803 public records about it (reviews, posts, feature requests) from eight source types and sorted 1,927 complaints by module (counts are close, not exact: two lanes read the same review sites): <a href="https://patraianton.github.io/annuities-genius-crm-launch-kit/ghl-complaints.html">ghl-complaints.html</a>. Agents meet it under other names (Agent CRM, Quility's Switchboard), so the copy names no competitor; it answers the complaints component by component.</p>
+<table class="fm"><tr><th>In the brief</th><th>AG today (step one)</th><th>What GoHighLevel users blame it for (step two)</th><th>Release one</th><th>Where it's said</th></tr>
+<tr><td class="k">Emails</td><td>GrantAI drafts the email; "Open in Mail" hands it to the agent's own mail app. No inbox sync, no email log on the case.</td><td>92 records. Mail lands in spam from shared sending addresses; inbox sync "broken for months"; "what good is a CRM… if you can't get into their main inbox?"</td><td>[Send from your own address.] Every email saved on the case; replies are a question for the CTO.</td><td>Email, bullet 1; "Connect your email once".</td></tr>
+<tr><td class="k">Phone calls</td><td>No telephony. GrantAI writes the call script; a recording can be uploaded by hand; the 2020–2023 voice recorder is gone.</td><td>168. Calls don't ring or drop mid-call; buying or porting a number takes weeks; outbound shows "Spam Likely".</td><td>Call from your computer; the call is on the case when you hang up. A local number, or [bring your office line over].</td><td>Email, bullet 2; Getting started, step 2.</td></tr>
+<tr><td class="k">Messages</td><td>Chat with website leads only, from one shared number for all agents.</td><td>210. Texting registration (A2P 10DLC) rejected or stuck for weeks, licensed insurance and finance professionals refused; notifications missing or hours late; conversations can't be exported.</td><td>Text any client [from your own number] once it clears registration. Every text on the case.</td><td>Email, bullet 2 and step 3; IMO note.</td></tr>
+<tr><td class="k">Meetings</td><td>A Calendly button on the agent's website; no calendar of its own.</td><td>50. Clients get the wrong time (time zones); Google and Outlook sync fails; double bookings.</td><td>Booking link from the case; the meeting and its reminder saved on it.</td><td>Email, bullet 2; webinar 0:17.</td></tr>
+<tr><td class="k">Quotes</td><td>The core of the product; the analysis and reports made for a client save to its profile on their own.</td><td>One record in 1,927 asks how to bring a quoting engine in: GoHighLevel has no quoting.</td><td>Nothing new. The quote is already here, so the conversation moves to it, not the other way around.</td><td>The message; side note 2.</td></tr>
+<tr><td class="k">E-Apps</td><td>FireLight, switched on at the IMO level; Start E-App prefilled.</td><td>None about e-applications.</td><td>The E-App stays the last step of the same timeline.</td><td>Email, timeline bullet; webinar 0:17; the post.</td></tr>
+<tr><td class="k">Across all six</td><td>-</td><td>Support 309; money (billing, fees, cancellation) 271; mobile app 216; learning curve 147; data lock-in 47.</td><td>Price of calls and texts stated before you turn them on. Export and support: questions for AG (To confirm). Mobile: AG has no app at all (question 4).</td><td>The email's plan line; webinar Q&amp;A; To confirm.</td></tr>
+</table>
+<p>Users blame the company before the features: support and billing are 30% of all complaints, and the quote and the E-App, the two things AG already has on the case, barely appear.</p></div></div>
+    <div class="find"><div class="n">3</div><p><b>Step three: who reads it.</b> The team described how its users split, and the agent portrait I built from 155 Reddit threads, about 60 insurance-forum threads, 769 Indeed reviews, and 98 IMO sites matched it: self-paying agents, IMO-sourced agents, and the IMO's Case Design desk. What it changed: one email with a segmented send instead of three, the note to IMO desks a week ahead, the hook on AG's own "Open in mail" moment, and the rule that every feature line says where it's saved, because, as one team lead put it in an r/InsuranceAgent thread, <i>"A CRM that's 60% current is worse than a spreadsheet everyone trusts."</i></p></div>
+    <div class="find"><div class="n">4</div><p><b>Step four: how AG speaks.</b> I read AG's own launches: the GrantAI 2.0 webinar, the blog, the LinkedIn showcase page. Their launch copy runs the pain, "So, we fixed it", three to six bullets, where to find it, the plan line, one call to action, and "You stay in control" is their recurring phrase; their September 29 post opened with "New in Annuities Genius:"; their GrantAI 2.0 launch was titled "from Lead to Close". All four pieces follow that, so the launch reads as AG, not as a new voice.</p></div>
+    <details class="src"><summary>Sources</summary>AG blog (June 2025 "Centralized Workflow", April 2026 "Case Sharing &amp; Case Design Queue", October 2025 "Meet GrantAI", September 2026 "Connect Annuities Genius to your AI app"), help center (Integrations, Case Sharing, Personal Website, Team Activity), GrantAI 2.0 webinar, March 2026 (YouTube recording, auto-captions), AG LinkedIn showcase page; r/InsuranceAgent and insurance-forums.com CRM threads 2023–2026; Wealthbox and Redtail pricing pages, help articles, integration pages, T3 2026 survey; GoHighLevel pricing page, Trustpilot reviews, G2 reviews, Agent CRM; Integrity and Quility platform pages; FCC/TCPA 2025, Twilio A2P 10DLC docs, Google OAuth verification policy, FINRA books-and-records rules.</details>
+  </div>
+
+  <div class="grid g2" style="margin-top:14px">
+    <div class="card">
+      <h3>How we'd know it worked</h3>
+      <ul class="plain">
+        <li>The launch number: the share of new cases with a client message sent from AG.</li>
+        <li>We run our own funnel on it first: every Wednesday attendee becomes a client in our AG account and gets the same email-and-call follow-up from it. If webinar-to-trial doesn't move, the promise isn't ready.</li>
+        <li>IMO side: share of Case Design requests that arrive with a conversation attached.</li>
+        <li>Money: seat retention of agents who message clients from AG vs. agents on the same plan and tenure who don't.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Four questions before this ships</h3>
+      <ol class="plain">
+        <li>I've assumed retention: keep solo and IMO-sourced agents from paying for a second tool. If the CRM's real job is moving IMO desks onto more seats, the plan flips: the IMO note becomes the lead piece, and calling and texting become the Enterprise upgrade rather than part of every plan. Which is it? And every plan, or Prime+ and up? In 2023-2025 in-platform texting sat on the mid and upper plans only, and Client Management left Starter in June 2026.</li>
+        <li>Which of our IMO partners hand their agents their own CRM, and will they see this as help or as competition? My default: brief every IMO a week ahead and offer the co-signed email. Any IMO that sees competition gets a founder call first, and its agents wait until it agrees.</li>
+        <li>How many of our agents pay for GoHighLevel under any name? Cancel reasons and one poll question at the webinar would tell us. If few, this launch carries the year; if many, a switch campaign starts the week after launch, with a CSV import (AG has none today) and a switch offer.</li>
+        <li>GoHighLevel's third-largest complaint is its mobile app, and AG has no app at all. Do calls and texts need a phone app in release one, or does the browser carry it until release two?</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:14px">
+    <h3>To confirm with the team</h3>
+    <p class="lead" style="margin-bottom:10px">Everything marked in the pieces above, in one place.</p>
+    <div class="grid g2">
+      <div><h4 class="ch">Product</h4><ul class="plain">
+        <li>The feature name <b>Client Conversations</b> and where it sits (open any client → Case → Client Conversations): my proposal for release one.</li>
+        <li>Do client replies come back to the case? That needs inbox sync; for Gmail, Google's yearly security assessment (several weeks).</li>
+        <li>Direct email send from GrantAI: announced on the February 13, 2026 webinar ("you can send emails from here now"), not visible in later demos or the help center. If it shipped, the "Open in mail" hook changes.</li>
+        <li>Request Case Design: the agent picks which emails and call notes go with the request.</li>
+        <li>Reminders: tasks with a due date and a repeat appear in a partner's May 2025 video and nowhere in the 2026 materials. Do they still exist, and can GrantAI's follow-ups become them?</li>
+        <li>Team Activity shows which designed cases got a follow-up (conversation data inside Team Activity).</li>
+        <li>Agency-level switch: the IMO decides whether calling and texting are on for its account, and who pays.</li>
+      </ul></div>
+      <div><h4 class="ch">Setup and money</h4><ul class="plain">
+        <li>Bringing an existing office line over: porting time to confirm; the email promises no date.</li>
+        <li>Calling: AG has no telephony today, and the in-app voice recorder of 2020–2023 is gone. Calling at launch is the heaviest build in this kit.</li>
+        <li>Texting from a number per agent: today every text goes out from one shared number, (225) 535-4832. A number per agent means an SMS provider and A2P 10DLC registration for each. Who files it, AG or the agent? Twilio's figure is up to 5 business days per campaign.</li>
+        <li>Pricing: email and meetings in every plan; calls and texts with N minutes and N texts included, then per minute and per text. My proposal, not AG's price list; which plans get it is question 1.</li>
+        <li>The webinar offer for a case built live, and the attendee offer at 0:22.</li>
+      </ul></div>
+      <div><h4 class="ch">Promises AG would be making: questions for AG's compliance owner and founder</h4><ul class="plain">
+        <li>Data use: can AG tell agents that their clients and conversations stay out of marketing and lead generation, are not sold, and are not shared with carriers or other agencies?</li>
+        <li>Texting: how does the product record a client's yes, how do existing clients give it, and what happens when a client opts out?</li>
+        <li>Recording calls: off by default for the agent, or set by the agency? One rule, printed the same in every piece.</li>
+        <li>Texting number: is it registered in each agent's name, and does AG file it?</li>
+        <li>Retention: how long is each message kept, and can it be exported for audits?</li>
+        <li>Leaving: what goes with an agent who leaves, and who owns the book? About 47 of the 1,927 complaints in the study are about getting your own data out.</li>
+        <li>The agents' launch email can go out co-signed by the IMO, or be handed to the IMO to send.</li>
+        <li>Support: does a person answer 949-600-7707? Support is the most frequent complaint about the tool in the brief.</li>
+      </ul></div>
+      <div><h4 class="ch">People</h4><ul class="plain">
+        <li>David Novak's two-minute slot at the webinar (optional).</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<div class="foot">Feature names and flows are my proposal for release one. · Anton Patrai</div>
+
+</main>
+<script>addEventListener('beforeprint',()=>document.querySelectorAll('details').forEach(d=>d.open=true))</script>
+</body>
+</html>
