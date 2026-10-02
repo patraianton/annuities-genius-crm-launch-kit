@@ -109,26 +109,27 @@
 </header>
 
 <h1>CRM launch kit: a launch email, a social post, a webinar agenda, plus a note to IMO desks.</h1>
+<p class="lead">IMO desks are the agency teams that design cases for agents.</p>
 <section class="how">
   <h2>How this was made</h2>
   <div class="card">
     <p class="repo">The rules, the checker and the record of this run: <a href="https://github.com/patraianton/ag-growth-rules">github.com/patraianton/ag-growth-rules</a></p>
     <ol class="steps">
-      <li>I went through AG's public record: all 93 help-center articles, the 103 videos and the Shorts on AG's channel (searched by their captions), 166 site pages, 65 snapshots of the pricing page since 2019, 54 posts by the company, its founder, and its CTO: <a href="https://patraianton.github.io/annuities-genius-crm-launch-kit/crm-audit.html">crm-audit.html</a></li>
-      <li>I read 3,803 public records about GoHighLevel, a CRM sold to insurance agents under other brand names, and sorted 1,927 complaints by module (counts are close, not exact: two research passes read the same review sites): <a href="https://patraianton.github.io/annuities-genius-crm-launch-kit/ghl-complaints.html">ghl-complaints.html</a></li>
-      <li>The agent portrait is built from 155 Reddit threads, about 60 insurance-forum threads, 769 Indeed reviews, and 98 IMO sites (<a href="https://github.com/patraianton/ag-growth-rules/blob/HEAD/templates/numbers.json">numbers.json</a>); AG's voice, from its own launches: <a href="https://github.com/patraianton/ag-growth-rules/blob/HEAD/rules/voice.md">voice.md</a></li>
-      <li>Research and writing agents I run wrote it, September 30 to October 2. Four review rounds ran on the night of September 30, each by six simulated reader roles from one model family; the text changed after them, and the checker (step 5) is what checked this version. No annuity agent has read it: <a href="https://github.com/patraianton/ag-growth-rules/blob/HEAD/process/misses.md">misses.md</a></li>
+      <li>I went through AG's public record: all 93 help-center articles and 166 site pages. I searched the 103 videos and the Shorts on AG's channel by their captions. I also went through 65 pricing-page snapshots since 2019 and 54 posts by AG, its founder and its CTO: <a href="https://patraianton.github.io/annuities-genius-crm-launch-kit/crm-audit.html">crm-audit.html</a></li>
+      <li>I read 3,803 public records about GoHighLevel, a CRM sold to insurance agents under other brand names. I sorted 1,927 complaints by product area. The counts are close, not exact, because two research passes read the same review sites: <a href="https://patraianton.github.io/annuities-genius-crm-launch-kit/ghl-complaints.html">ghl-complaints.html</a></li>
+      <li>The annuity-agent portrait comes from 155 Reddit threads, about 60 insurance-forum threads, 769 Indeed reviews and 98 IMO sites (<a href="https://github.com/patraianton/ag-growth-rules/blob/HEAD/templates/numbers.json">numbers.json</a>). AG's voice comes from its own launches: <a href="https://github.com/patraianton/ag-growth-rules/blob/HEAD/rules/voice.md">voice.md</a></li>
+      <li>AI agents I run did the research and wrote it, September 30 to October 2. Six simulated readers from one AI model family reviewed an earlier text in four rounds, the night of September 30. The text changed after that. The checker (step 5) is what checked this version, and no annuity agent has read it: <a href="https://github.com/patraianton/ag-growth-rules/blob/HEAD/process/misses.md">misses.md</a></li>
       <li>The checker gave 189 findings on the October 1 version of this kit and none on this one: <a href="https://github.com/patraianton/ag-growth-rules/blob/HEAD/process/runs/2026-10-02-ag-kit/README.md">run report</a></li>
-      <li>An agent on another model family (OpenAI's) tried to overturn the nine product facts: six held, two were overturned and narrowed to what their source shows, one could not be checked from public pages: <a href="https://github.com/patraianton/ag-growth-rules/blob/HEAD/templates/facts.md">facts.md</a></li>
+      <li>An agent on another AI model family (OpenAI's) tried to overturn the nine product facts. Six held, and one could not be checked from public pages. Two were overturned and narrowed to what their source shows: <a href="https://github.com/patraianton/ag-growth-rules/blob/HEAD/templates/facts.md">facts.md</a></li>
     </ol>
   </div>
 </section>
 
 <section>
   <h2>1 · Launch email</h2>
-  <p class="lead">Desk seats get section 4 instead; seats on an agency's account get no price line.</p>
+  <p class="lead">Case Design desks get section 4 instead. Agents on an agency's account get this email without the pricing bullet.</p>
   <div class="frame">
-    <div class="bar"><span><b>From:</b> Annuities Genius Team</span><span><b>Subject:</b> New in Annuities Genius: email, calls, texts, meetings - all on the case</span><span><b>Preview:</b> Stop rebuilding the story before every callback. Live demo Wednesday.</span></div>
+    <div class="bar"><span><b>From:</b> Annuities Genius Team</span><span><b>Subject:</b> New in Annuities Genius: email, calls, texts and meetings, all on the case</span><span><b>Preview:</b> Stop rebuilding the story before every callback. Live demo Wednesday.</span></div>
     <div class="split">
       <div class="email">
         <p>Hi [First name],</p>
@@ -136,37 +137,39 @@
         <p>So we fixed it. Meet <b><span class="tbc" title="feature name: my proposal">Client Conversations</span></b>: starting [date], your Annuities Genius CRM keeps the whole conversation on the case.<sup class="k">2</sup></p>
         <ul>
           <li><b>Email from the case.</b> Send the report and the follow-up without leaving Annuities Genius. Every email you send is saved on the case.</li>
-          <li><b>Calls, texts, meetings: all from the case.</b> Call from your computer. Text any client <span class="tbc" title="today: website-lead chat only, from one shared number">from your own number</span> - until now, texting was for website leads only. Send your booking link; the meeting and its reminder land on the case. All of it is saved on the case automatically.</li>
-          <li><b>Follow-ups that don't slip.</b> GrantAI drafts each follow-up from the illustration you sent and your call notes, and it waits on the case for you to edit, send, or skip.</li>
-          <li><b>One Client Profile, one timeline.</b> The timeline you already have - reports, illustrations, the E-App - now shows every email, every call, every text next to them, dated.</li>
-          <li><span class="seg">Agents on an IMO's Enterprise account only</span><sup class="k">3</sup><br><b>Case Design with the whole story.</b><sup class="k">4</sup> Click Request Case Design as you do today and <span class="tbc" title="the agent picks what goes with the case: to confirm">pick the emails and call notes that go with it</span> - [IMO name]'s desk designs for what the client actually asked. Nothing changes in the tools [IMO name] gives you.</li>
+          <li><b>Calls, texts, meetings.</b> Call from your computer. Text any client <span class="tbc" title="today: texting only with website leads, from one shared number">from your own number</span>.<sup class="k">3</sup> Send your booking link. Each call, text and meeting is saved on the case.</li>
+          <li><b>Follow-ups that don't slip.</b> GrantAI drafts each follow-up from the illustration you sent (the annuity's projected values) and your call notes. The draft waits on the case for you to edit, send, or skip.</li>
+          <li><b>One Client Profile (the client's page), one timeline.</b> Your timeline shows the reports, the illustrations and the E-App (the electronic application sent to the insurance company). Now it also shows every email, every call, every text next to them, with dates.</li>
+          <li><span class="seg">Agents on an IMO's Enterprise account only</span><sup class="k">4</sup><br><b>The whole story goes to Case Design, the IMO desk that designs your cases.</b><sup class="k">5</sup> Click Request Case Design and <span class="tbc" title="the agent picks what goes with the case: to confirm">pick the emails and call notes that go with it</span>. [IMO name]'s desk designs the case around what the client actually asked. Nothing changes in the tools [IMO name] gives you.</li>
         </ul>
         <p><b>Getting started.</b> Every client you've quoted in Annuities Genius is already here.</p>
         <ol>
-          <li>Connect your email once - that switches on email and meetings.</li>
-          <li>Pick a local number to call from - or <span class="tbc" title="porting time: to confirm">bring your office line over</span>.<sup class="k">5</sup></li>
-          <li>Texting switches on once your number clears the registration every US business texting line needs.</li>
+          <li>Connect your email once. That switches on email and meetings.</li>
+          <li>Pick a local number to call from. Or <span class="tbc" title="how long moving your office number takes: to confirm">bring your office line over</span>.<sup class="k">6</sup></li>
+          <li>Texting switches on once your number clears the registration every US business texting number needs.</li>
         </ol>
-        <p>Already on Redtail or Wealthbox? Keep them for your book<sup class="k">6</sup> - bring any contact in with one click, as you do today.</p>
+        <p>Already use Redtail or Wealthbox as your CRM? Keep them for your book of clients<sup class="k">8</sup>. Bring any contact in with one click.</p>
         <p><b>You stay in control:</b></p>
         <ul>
           <li>Nothing goes to a client without your click: GrantAI drafts, you decide.</li>
-          <li><span class="tbc" title="plans: in-platform texting sat on the mid and upper plans only in 2023-2025">Email and meetings come with every plan.</span> Calls and texts: <span class="tbc" title="pricing: my proposal, to confirm">N minutes and N texts a month included, then $X a minute and $Y a text</span>.</li>
+          <li><span class="tbc" title="from 2023 to 2025, texting inside Annuities Genius came only with the middle and top plans">Email and meetings come with every plan</span>. Calls and texts: <span class="tbc" title="pricing: my proposal, to confirm">N minutes and N texts a month included, then $X a minute and $Y a text</span>.</li>
         </ul>
         <p><b>Where to find it:</b> <span class="tbc" title="placement: my proposal">open any client → Case → <b>Client Conversations</b></span>.</p>
-        <p>See one client go from first lead to E-App, live: <b>Wednesday, [date], at 11 AM PT (2 PM ET)</b>. Bring your questions on texting rules and your data - the live Q&amp;A is for them.</p>
+        <p>See one client go from first call to signed application, live: <b>Wednesday, [date], at 11 AM PT (2 PM ET)</b>. Bring your questions on texting rules and your data. The live Q&amp;A is for them.</p>
         <p><a class="btn" href="#">Save My Seat</a></p>
         <p>Questions? Give us a call at 949-600-7707.</p>
         <p class="sig">Best,<br>Annuities Genius Team</p>
       </div>
       <aside class="notes">
         <h4>Side notes: why it reads this way</h4>
-        <div><b><sup class="k">1</sup>Hook = AG's own "Open in mail" moment</b>That's where the GrantAI 2.0 demo hands off to the inbox. Current users know that moment.</div>
-        <div><b><sup class="k">2</sup>No competitor named</b>The copy sells the one thing no outside tool can have: the quote and the case are already here.</div>
-        <div><b><sup class="k">3</sup>Segmented send</b>Solo agents get the short version. The Case Design line goes only to agents on an IMO's Enterprise account, after their IMO has heard.</div>
-        <div><b><sup class="k">4</sup>Desk line = send, not watch</b>Request Case Design already exists; attaching the conversation to it is the new part.</div>
-        <div><b><sup class="k">5</sup>Honest about setup</b>Calling starts with a new local number; the time to move an existing one is to confirm. Texting waits for the one-time registration (A2P 10DLC: Twilio quotes up to 5 business days per campaign). Pulling Gmail replies back needs Google's yearly security assessment, which takes several weeks.</div>
-        <div><b><sup class="k">6</sup>Redtail / Wealthbox: keep them</b>Today's import is one-way, so "keep them" is what the product can honestly support. Whether conversation history can go back to Redtail is answered live at 0:04, not promised in the email.</div>
+        <div><b><sup class="k">1</sup>The email opens on AG's own "Open in mail" moment</b>That's where the GrantAI 2.0 demo hands off to the inbox. Current users know that moment.</div>
+        <div><b><sup class="k">2</sup>No competitor is named</b>The email sells the one thing no outside tool can have: the quote and the case are already here.</div>
+        <div><b><sup class="k">3</sup>Texting before this launch</b>Until now, texting was for website leads only: people who left their contact details on a website.</div>
+        <div><b><sup class="k">4</sup>Two versions of the email</b>Solo agents get it without the Case Design bullet. That bullet goes only to agents on an IMO's Enterprise account. Their email goes out after their IMO gets the note in section 4.</div>
+        <div><b><sup class="k">5</sup>Case Design: the agent sends, the desk does not watch</b>Request Case Design already exists in AG. New: the agent picks which emails and call notes go with the request. The desk sees only what the agent sent.</div>
+        <div><b><sup class="k">6</sup>What setup really takes</b>Calling starts on a new local number: how long it takes to move an existing one is still to confirm. Texting waits for the one-time registration (A2P 10DLC). Twilio, a texting provider, says the review takes up to 5 business days for each campaign.</div>
+        <div><b><sup class="k">7</sup>Replies from Gmail</b>Bringing Gmail replies back into the case needs Google's yearly security assessment, which takes several weeks.</div>
+        <div><b><sup class="k">8</sup>Agents keep Redtail and Wealthbox</b>Today's one-click import is one-way, so "keep them" is what the product can honestly support. Whether conversation history can go back to Redtail is answered live at 0:04. The email does not promise it.</div>
       </aside>
     </div>
   </div>
@@ -182,22 +185,22 @@
 
 So, we fixed it.</div>
         <div class="fold">…see more</div>
-        <div class="txt rest">New in Annuities Genius: <span class="tbc" title="feature name: my proposal">Client Conversations</span> 📨 Email, call, text, book a meeting - right from the client's case.
+        <div class="txt rest">New in Annuities Genius: <span class="tbc" title="feature name: my proposal">Client Conversations</span> 📨 Email, call, text and book a meeting, right from the client's case.
 
 ✉️ Every email, every call, every text saved on the case
 🤖 GrantAI drafts the follow-up. You approve.
 
-The same case you already quote in - now with the email, the call, and the text on it. No sticky notes. No lost follow-ups. Just a faster path from first lead to signed E-App.
+It's the same case you already quote in. Now the email, the call, and the text sit on it too. No sticky notes. No lost follow-ups. Just a faster path from first call to signed application.
 
-Live demo Wednesday, [date], 11 AM PT - link in the first comment 👇
+Live demo Wednesday, [date], 11 AM PT. Link in the first comment 👇
 
 Where do your follow-ups live today?</div>
         <div class="tags">#Annuities #InsuranceAgents #FinancialAdvisors #InsurTech #AnnuitiesGenius</div>
-        <div class="media"><div class="c">Margaret · TX · IRA rollover</div><ol><li>Lead</li><li>Quote</li><li>Report emailed</li><li>Call</li><li>E-App sent</li></ol><div class="play">▶ screen recording of one client's timeline</div></div>
+        <div class="media"><div class="c">Margaret · TX · IRA rollover</div><ol><li>New lead (left contact details)</li><li>Quote</li><li>Report emailed</li><li>Call</li><li>E-App sent</li></ol><div class="play">▶ screen recording of one client's timeline</div></div>
         <div class="react"><span>👍 ❤️ 💡</span><span>Like</span><span>Comment</span><span>Repost</span></div>
       </div>
     </div>
-    <div class="side"><b>Format</b>Built from AG's own posts: the "New in Annuities Genius:" opener from the September 29 post, emoji bullets, "No … No … Just …", a closing question. Pain in the first two lines. Margaret is an invented client.</div>
+    <div class="side"><b>The form comes from AG's own posts</b>It uses the "New in Annuities Genius:" opener from September 29, emoji bullets, "No … No … Just …" and a closing question. The pain comes in the first two lines. Margaret is an invented client.</div>
   </div>
 </section>
 
@@ -206,45 +209,45 @@ Where do your follow-ups live today?</div>
   <div class="frame web">
     <div class="hero">
       <div class="kicker">Live Masterclass</div>
-      <h3>Watch Us Take a Client from Lead to E-App - Without Leaving Annuities Genius (Live Demo)</h3>
+      <h3>Live demo: one client, from first call to signed application, without leaving Annuities Genius</h3>
       <div class="when">Wednesday, [date] · 11 AM PT / 1 PM CT / 2 PM ET · 30 minutes · Live, no slides, no fluff</div>
       <span class="btn">Save My Seat</span>
       <div class="rec">Can't make it live? Register anyway to get the recording.</div>
-      <div class="hosts"><div>Meet your hosts: Danny (Head of Sales) and Oleg Shovkun (CTO).</div><div>Bring your toughest case - age, state, amount, goal, no names - and we'll build it live from the chat, on the clock. <span class="tbc" title="offer to confirm">Build yours and next month is on us.</span></div><div>Everyone is welcome - you don't need to be an Annuities Genius customer.</div></div>
-      <div class="leave"><b>What you'll get</b><div>✓ The "first three cases in Client Conversations" checklist</div><div>✓ A ready-to-use follow-up plan for the first month - from first call to signed E-App</div></div>
+      <div class="hosts"><div>Meet your hosts: Danny (Head of Sales) and Oleg Shovkun (CTO).</div><div>Bring your toughest case: age, state, amount, goal, no names. We'll build it live from the chat, on the clock. <span class="tbc" title="offer to confirm">Build yours and next month is on us.</span></div><div>Everyone is welcome. You don't need to be an Annuities Genius customer.</div></div>
+      <div class="leave"><b>What you'll get</b><div>✓ The "first three cases in Client Conversations" checklist</div><div>✓ A ready-to-use follow-up plan for the first month, from first call to signed application</div></div>
     </div>
     <div class="agenda">
       <ol>
         <li><b>0:00</b><span>Welcome &amp; poll: where do your follow-ups live today?</span></li>
-        <li><b>0:02</b><span><span class="tbc" title="founder slot: optional">David Novak - why the conversation belongs on the case</span> (optional)</span></li>
-        <li><b>0:04</b><span>"I already have a CRM": what stays in Redtail or Wealthbox, and what lives on the case; what it costs; the number clients see; calls from your cell</span></li>
-        <li><b>0:07</b><span><b>LIVE:</b> your case arrives as a new lead → first call → quote → report emailed from the case</span></li>
-        <li><b>0:14</b><span>GrantAI drafts the follow-up email and a text reminder - you edit, send, or skip</span></li>
-        <li><b>0:17</b><span>Meeting booked → notes on the case → E-App prefilled (FireLight, where your IMO has it switched on)</span></li>
+        <li><b>0:02</b><span><span class="tbc" title="founder slot: optional">David Novak: why the conversation belongs on the case</span> (optional)</span></li>
+        <li><b>0:04</b><span>"I already have a CRM": what stays in Redtail or Wealthbox and what lives on the case. Also: what it costs, the number clients see, calls from your cell</span></li>
+        <li><b>0:07</b><span><b>LIVE:</b> your case arrives as a new lead (left contact details) → first call → quote → report emailed from the case</span></li>
+        <li><b>0:14</b><span>GrantAI drafts the follow-up email and a text reminder. You edit, send, or skip.</span></li>
+        <li><b>0:17</b><span>Meeting booked → notes on the case → E-App (the electronic application) prefilled in FireLight, the e-application system. Prefill works where your IMO has FireLight switched on.</span></li>
         <li><b>0:20</b><span>Working with your IMO's Case Design desk: Request Case Design with the conversation attached</span></li>
         <li><b>0:22</b><span>Plans, free trials, <span class="tbc" title="offer to confirm">attendee offer</span>, next Wednesday's masterclass</span></li>
         <li><b>0:23</b><span>Live Q&amp;A: texting rules, your data and what happens if you leave, and your questions</span></li>
       </ol>
-      <div class="imo">IMO admins and Case Design desks: a separate walkthrough on [date] - the desk view. [Book a time]</div>
+      <div class="imo">On [date], IMO admins and Case Design desks get a separate walkthrough of what the desk sees. [Book a time]</div>
     </div>
   </div>
 </section>
 
 <section>
-  <h2>4 · Note for IMO admins and Case Design desks</h2>
-  <p class="lead">Goes out a week before the agents' email; agents on an IMO's account get section 1 after their IMO has.</p>
+  <h2>4 · Note for IMO admins and Case Design desks (the agency's managers and its case designers)</h2>
+  <p class="lead">Goes out a week before the agents' email. Agents on an IMO's account get section 1 after their IMO gets this note.</p>
   <div class="frame" style="max-width:680px">
-      <div class="bar"><span><b>To:</b> IMO admins and Case Design desks on Enterprise accounts</span><span><b>Subject:</b> New for your Case Design desk: what the client said, sent with the case</span></div>
+      <div class="bar"><span><b>To:</b> IMO admins and Case Design desks on Enterprise accounts</span><span><b>Subject:</b> New for your Case Design desk: what the client said, sent with the design request</span></div>
       <div class="email">
         <p>Hi [First name],</p>
-        <p>You're hearing this a week before your agents do. From [date], agents on Annuities Genius can email and call clients and book meetings from the client's case, with texting <span class="tbc" title="number per agent: to confirm">from the agent's own number</span> as each one clears registration.</p>
+        <p>You're hearing this a week before your agents do. From [date], agents on Annuities Genius can email clients, call them and book meetings from the client's case. Texting <span class="tbc" title="whether each agent gets their own number: to confirm">from the agent's own number</span> switches on as each number clears the US registration for business texting.</p>
         <p>What it means for your desk:</p>
         <ul>
-          <li>A Case Design request can now arrive with the client's emails, call notes, and questions attached, so your desk sees what the client asked next to the numbers.</li>
-          <li>Designed cases that stall after the illustration are production your agency never sees. Now the follow-up sits on the case <span class="tbc" title="conversation data inside Team Activity: to confirm">and Team Activity shows which designed cases got one</span>.</li>
-          <li>Nothing changes in the tools you give your agents today. <span class="tbc" title="agency-level switch: to confirm">You decide whether calling and texting are switched on for your agency's account, and who pays for them</span>.</li>
+          <li>A Case Design request can now arrive with the client's emails, call notes, and questions attached. Your desk sees what the client asked next to the numbers.</li>
+          <li>Designed cases that stall after the illustration (the projected values sent to the client) are sales your agency never sees. Now the follow-up sits on the case <span class="tbc" title="whether the Team Activity dashboard can show the conversations: to confirm">and the Team Activity dashboard shows which designed cases got one</span>.</li>
+          <li>Nothing changes in the tools you give your agents today. <span class="tbc" title="whether calling and texting can be switched on for the whole agency account: to confirm">You decide whether calling and texting are switched on for your agency's account, and who pays for them</span>.</li>
         </ul>
-        <p>For your compliance team: we'd like to walk through texting consent, opt-outs, call recording and message retention with you before your agents' email goes out. Your firm's policies still apply.</p>
+        <p>For your compliance team: we'd like to walk through texting consent, clients stopping texts, call recording and message retention. We'd like to do it with you before your agents' email goes out. Your firm's policies still apply.</p>
         <p>Your agents' launch email goes out on [date]. Want it to come from you? <span class="tbc" title="to confirm">We'll send it co-signed by [IMO name], or give you the copy to send under your own name</span>. Or book a walkthrough for your desk: <b>[Book a time]</b></p>
         <p class="sig">Best,<br>Annuities Genius Team</p>
       </div>
@@ -257,28 +260,28 @@ Where do your follow-ups live today?</div>
     <p class="lead" style="margin-bottom:10px">Everything marked in the pieces above (a dotted underline on the page, square brackets in the markdown), in one place.</p>
     <div class="grid g2">
       <div><h4 class="ch">Product</h4><ul class="plain">
-        <li>The feature name <b>Client Conversations</b> and where it sits (open any client → Case → Client Conversations): my proposal for release one.</li>
-        <li>Do client replies come back to the case? That needs inbox sync; for Gmail, Google's yearly security assessment (several weeks).</li>
-        <li>Direct email send from GrantAI: announced on the February 13, 2026 webinar, not visible in later demos or the help center. If it shipped, the "Open in mail" hook changes.</li>
-        <li>Request Case Design: the agent picks which emails and call notes go with the request.</li>
-        <li>Reminders, seen in a partner's May 2025 video: do they still exist, and can GrantAI's follow-ups become them?</li>
+        <li>The feature name <b>Client Conversations</b>: my proposal for the first release. Where it sits in the app is my proposal too: open any client → Case → <span class="tbc" title="placement: my proposal">Client Conversations</span>.</li>
+        <li>Do client replies come back to the case? That needs a sync with the agent's inbox. For Gmail, it also needs Google's yearly security assessment (several weeks).</li>
+        <li>Direct email send from GrantAI was announced on the February 13, 2026 webinar. It is not visible in later demos or the help center. If it shipped, the email's "Open in mail" opening changes.</li>
+        <li>Request Case Design: the agent chooses the emails and call notes to send with the request.</li>
+        <li>Reminders were seen in a partner's May 2025 video. Do they still exist, and can GrantAI's follow-ups become them?</li>
         <li>Team Activity shows which designed cases got a follow-up.</li>
         <li>Agency-level switch: the IMO decides whether calling and texting are on for its account, and who pays.</li>
       </ul></div>
       <div><h4 class="ch">Setup and money</h4><ul class="plain">
-        <li>Bringing an existing office line over: porting time to confirm; the email promises no date.</li>
-        <li>Calling: AG has no telephony today; calling at launch is the heaviest build in this kit.</li>
-        <li>Texting from a number per agent: today every text goes out from one shared number, (225) 535-4832.</li>
-        <li>Pricing: email and meetings in every plan; calls and texts with N minutes and N texts included, then per minute and per text. My proposal, not AG's price list. Every plan, or Prime+ and up?</li>
+        <li>Bringing an existing office line over (porting): how long it takes is to confirm. The email promises no date.</li>
+        <li>Calling: AG has no phone system today. Calling at launch is the biggest piece of work in this kit.</li>
+        <li>Texting from each agent's own number: today every text goes out from one shared number, (225) 535-4832.</li>
+        <li>Pricing, my proposal and not AG's price list: email and meetings in every plan. Calls and texts with N minutes and N texts included, then per minute and per text. Every plan, or only AG's Prime+ plan and the plans above it?</li>
         <li>The webinar offer for a case built live, and the attendee offer at 0:22.</li>
       </ul></div>
       <div><h4 class="ch">Promises AG would be making: questions for AG's compliance owner and founder</h4><ul class="plain">
-        <li>Data use: can AG tell agents that their clients and conversations stay out of marketing and lead generation, are not sold, and are not shared with carriers or other agencies?</li>
-        <li>Texting: how does the product record a client's yes, how do existing clients give it, and what happens when a client opts out?</li>
+        <li>Data use: can AG tell agents that their clients and conversations stay out of marketing and lead generation? Can it say they are not sold and not shared with insurance companies (carriers) or other agencies?</li>
+        <li>Texting: how does the product record a client's yes? How do existing clients give it? What happens when a client asks to stop getting texts?</li>
         <li>Recording calls: off by default for the agent, or set by the agency?</li>
         <li>Texting number: is it registered in each agent's name, and does AG file it?</li>
         <li>Retention: how long is each message kept, and can it be exported for audits?</li>
-        <li>Leaving: what goes with an agent who leaves, and who owns the book?</li>
+        <li>Leaving: what goes with an agent who leaves, and who owns the book of clients?</li>
         <li>The agents' launch email can go out co-signed by the IMO, or be handed to the IMO to send.</li>
         <li>Support: does a person answer 949-600-7707?</li>
       </ul></div>
@@ -286,7 +289,7 @@ Where do your follow-ups live today?</div>
         <li>David Novak's two-minute slot at the webinar (optional).</li>
       </ul></div>
     </div>
-    <p class="srcline">Sources: AG's public record (<a href="https://patraianton.github.io/annuities-genius-crm-launch-kit/crm-audit.html">audit</a>); public complaints about another CRM (<a href="https://patraianton.github.io/annuities-genius-crm-launch-kit/ghl-complaints.html">complaint study</a>); the facts table and the run report (<a href="https://github.com/patraianton/ag-growth-rules/blob/HEAD/templates/facts.md">facts.md</a>, <a href="https://github.com/patraianton/ag-growth-rules/blob/HEAD/process/runs/2026-10-02-ag-kit/README.md">run report</a>); r/InsuranceAgent and insurance-forums.com CRM threads 2023–2026; Wealthbox and Redtail pricing pages and help articles; Twilio A2P 10DLC docs, Google OAuth verification policy, FCC/TCPA 2025, FINRA books-and-records rules.</p>
+    <p class="srcline">Sources: AG's public record (<a href="https://patraianton.github.io/annuities-genius-crm-launch-kit/crm-audit.html">audit</a>) and public complaints about another CRM (<a href="https://patraianton.github.io/annuities-genius-crm-launch-kit/ghl-complaints.html">complaint study</a>). The facts table and the run report: <a href="https://github.com/patraianton/ag-growth-rules/blob/HEAD/templates/facts.md">facts.md</a>, <a href="https://github.com/patraianton/ag-growth-rules/blob/HEAD/process/runs/2026-10-02-ag-kit/README.md">run report</a>. CRM threads on r/InsuranceAgent and insurance-forums.com, 2023–2026. Wealthbox and Redtail pricing pages and help articles. Twilio's docs on A2P 10DLC, the registration for business texting numbers. Google's OAuth verification policy, its review of apps that read Gmail. The FCC's 2025 rules under the TCPA, the US law on calls and texts. Record-keeping rules (books and records) from FINRA, the US broker regulator.</p>
   </div>
 </section>
 
