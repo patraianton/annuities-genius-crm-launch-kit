@@ -23,12 +23,6 @@
   .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
   .grid{display:grid;gap:14px}
   .g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
-  .msg{background:var(--ink);color:#fff;border-radius:18px;padding:24px 28px;font-size:22px;line-height:1.35;font-weight:600;text-wrap:balance}
-  .msg small{display:block;font-size:14px;font-weight:400;color:#cbd5e1;margin-top:10px;text-wrap:balance}
-  .msg small b{color:#fff;font-weight:700}
-  .msg .hl{color:var(--yellow)}
-  .msg u{text-decoration:none;border-bottom:3px solid var(--yellow)}
-  .msg .tbc{color:#cbd5e1;border-bottom-color:#94a3b8}
   .tbc{border-bottom:2px dotted #94a3b8;color:#475569;cursor:help}
   sup.k{display:inline-block;width:14px;height:14px;line-height:14px;text-align:center;border-radius:50%;background:var(--soft);color:var(--blue);font-size:9px;font-weight:800;vertical-align:top;margin-left:1px;transform:translateY(-2px)}
   /* frames */
@@ -91,26 +85,19 @@
   .web .agenda li:first-child{border-top:0}
   .web .agenda li b{color:var(--blue);font-variant-numeric:tabular-nums}
   .web .agenda .imo{margin-top:12px;font-size:13.5px;color:var(--mute)}
-  /* approach */
-  .find{display:grid;grid-template-columns:34px minmax(0,1fr);gap:12px;padding:11px 0;border-top:1px solid var(--line)}
-  .find:first-child{border-top:0}
-  .find .n{width:30px;height:30px;border-radius:8px;background:var(--soft);color:var(--blue);font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px}
-  .find p{margin:0;font-size:15px;max-width:74ch}
+  /* how it was made, to confirm */
+  .how{margin-top:26px}
+  .repo{font-size:16px;margin:0 0 12px}
+  .repo a{color:var(--blue);font-weight:700}
+  ol.steps{margin:0;padding-left:22px}
+  ol.steps li{margin:0 0 6px;font-size:14.5px}
+  .srcline{margin:14px 0 0;font-size:13.5px;color:var(--mute)}
   h4.ch{margin:0 0 6px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
-  .fm{border-collapse:collapse;width:100%;font-size:13px;margin:10px 0 6px}
-  .fm th,.fm td{border:1px solid var(--line);padding:6px 8px;vertical-align:top;text-align:left}
-  .fm th{background:#f1f5f9;font-size:11.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--mute)}
-  .fm td.k{font-weight:700;white-space:nowrap}
-  .find>div:last-child p{max-width:none}
   ul.plain{margin:0;padding-left:18px}
   ul.plain li{margin:0 0 7px;font-size:15px}
-  ol.plain{margin:0;padding-left:20px}
-  ol.plain li{margin:0 0 8px;font-size:15px}
-  details.src{margin-top:12px;font-size:13.5px;color:var(--mute)}
-  details.src summary{cursor:pointer;font-weight:600}
   .foot{border-top:1px solid var(--line);margin-top:34px;padding-top:14px;color:var(--mute);font-size:13px}
-  @media (max-width:600px){h1{font-size:28px}.msg{font-size:19px;padding:20px}.email,.web .agenda{padding:18px}}
-  @media print{*{-webkit-print-color-adjust:exact;print-color-adjust:exact}body{background:#fff}.card,.web,.li,.find,.frame{break-inside:avoid}h2{break-after:avoid}main{padding:0}.notes{position:static}details{display:block}details::details-content{content-visibility:visible;display:block}}
+  @media (max-width:600px){h1{font-size:28px}.email,.web .agenda{padding:18px}}
+  @media print{*{-webkit-print-color-adjust:exact;print-color-adjust:exact}body{background:#fff}.card,.web,.li,.frame{break-inside:avoid}h2{break-after:avoid}main{padding:0}.notes{position:static}}
 </style>
 </head>
 <body>
@@ -122,17 +109,24 @@
 </header>
 
 <h1>CRM launch kit: a launch email, a social post, a webinar agenda, plus a note to IMO desks.</h1>
-<p class="lead">One message across all four, in AG's voice. The note to IMO desks goes out a week before the email; a short note on how the kit was made closes it. A dotted underline on the page (square brackets in the markdown) marks a fact to confirm with the team; the full list is at the end of "How this was made". Feature names and flows are my proposal for release one.</p>
-
-<section>
-  <div class="msg">The case doesn't end when you hit <span class="hl">Open in mail</span>. Email, calls, texts, meetings: the whole conversation now lives <u>on the case</u> - where the quote already does.
-    <small>Three readers, one message: the agent who pays for their own seat · the agent who came through an IMO · the IMO's Case Design desk (its own note, below).</small>
+<section class="how">
+  <h2>How this was made</h2>
+  <div class="card">
+    <p class="repo">The rules, the checker and the record of this run: <a href="https://github.com/patraianton/ag-growth-rules">github.com/patraianton/ag-growth-rules</a></p>
+    <ol class="steps">
+      <li>I went through AG's public record: all 93 help-center articles, the 103 videos and the Shorts on AG's channel (searched by their captions), 166 site pages, 65 snapshots of the pricing page since 2019, 54 posts by the company, its founder, and its CTO: <a href="https://patraianton.github.io/annuities-genius-crm-launch-kit/crm-audit.html">crm-audit.html</a></li>
+      <li>I read 3,803 public records about GoHighLevel, a CRM sold to insurance agents under other brand names, and sorted 1,927 complaints by module (counts are close, not exact: two research passes read the same review sites): <a href="https://patraianton.github.io/annuities-genius-crm-launch-kit/ghl-complaints.html">ghl-complaints.html</a></li>
+      <li>The agent portrait is built from 155 Reddit threads, about 60 insurance-forum threads, 769 Indeed reviews, and 98 IMO sites (<a href="https://github.com/patraianton/ag-growth-rules/blob/HEAD/templates/numbers.json">numbers.json</a>); AG's voice, from its own launches: <a href="https://github.com/patraianton/ag-growth-rules/blob/HEAD/rules/voice.md">voice.md</a></li>
+      <li>Research and writing agents I run wrote it, September 30 to October 2. Four review rounds ran on the night of September 30, each by six simulated reader roles from one model family; the text changed after them, and the checker (step 5) is what checked this version. No annuity agent has read it: <a href="https://github.com/patraianton/ag-growth-rules/blob/HEAD/process/misses.md">misses.md</a></li>
+      <li>The checker gave 189 findings on the October 1 version of this kit and none on this one: <a href="https://github.com/patraianton/ag-growth-rules/blob/HEAD/process/runs/2026-10-02-ag-kit/README.md">run report</a></li>
+      <li>An agent on another model family (OpenAI's) tried to overturn the nine product facts: six held, two were overturned and narrowed to what their source shows, one could not be checked from public pages: <a href="https://github.com/patraianton/ag-growth-rules/blob/HEAD/templates/facts.md">facts.md</a></li>
+    </ol>
   </div>
 </section>
 
 <section>
   <h2>1 · Launch email</h2>
-  <p class="lead">To agent seats, in AG's announcement order: the pain, what's new, where to find it, one call to action. Solo agents get it on launch day; agents on an IMO's Enterprise account get it after their IMO has received the note in section 4. Desk seats get section 4 instead; seats on an agency's account get no price line.</p>
+  <p class="lead">Desk seats get section 4 instead; seats on an agency's account get no price line.</p>
   <div class="frame">
     <div class="bar"><span><b>From:</b> Annuities Genius Team</span><span><b>Subject:</b> New in Annuities Genius: email, calls, texts, meetings - all on the case</span><span><b>Preview:</b> Stop rebuilding the story before every callback. Live demo Wednesday.</span></div>
     <div class="split">
@@ -180,7 +174,6 @@
 
 <section>
   <h2>2 · Social post (LinkedIn, mirrored to Facebook)</h2>
-  <p class="lead">For prospects as well as users: a pain every agent shares, in AG's LinkedIn format.</p>
   <div class="two">
     <div class="frame">
       <div class="li">
@@ -210,7 +203,6 @@ Where do your follow-ups live today?</div>
 
 <section>
   <h2>3 · Webinar agenda (registration page)</h2>
-  <p class="lead">AG's Wednesday masterclass slot: 30 minutes, live, no slides.</p>
   <div class="frame web">
     <div class="hero">
       <div class="kicker">Live Masterclass</div>
@@ -240,7 +232,7 @@ Where do your follow-ups live today?</div>
 
 <section>
   <h2>4 · Note for IMO admins and Case Design desks</h2>
-  <p class="lead">Goes out a week before the agents' email, so desks hear it from us first; agents on an IMO's account get section 1 after their IMO has.</p>
+  <p class="lead">Goes out a week before the agents' email; agents on an IMO's account get section 1 after their IMO has.</p>
   <div class="frame" style="max-width:680px">
       <div class="bar"><span><b>To:</b> IMO admins and Case Design desks on Enterprise accounts</span><span><b>Subject:</b> New for your Case Design desk: what the client said, sent with the case</span></div>
       <div class="email">
@@ -260,93 +252,46 @@ Where do your follow-ups live today?</div>
 </section>
 
 <section>
-  <h2>How this was made</h2>
-  <p class="lead">Built September 30 to October 1 by research and writing agents I run. Steps one to four below say what was read and what it changed; sources are linked in each step and listed below.</p>
-  <p class="lead">Four review rounds on the night of September 30, each by six simulated reader roles (an annuity agent, an IMO owner, the hiring manager, AG's house voice, a design critic, a fact-checker), all from one model family and all reading the same research folder. A separate audit on October 1 found three existing features that the research had called missing; this version carries its corrections.</p>
-  <p class="lead">After the rounds I wrote down what had slipped through as rules, with a program that checks a draft against them: a number with no source, a promise in AG's name with no owner, a line cut in review that came back, a sentence on this page that is missing from its text file.</p>
-  <p class="lead">On October 2 it gave 189 findings on the October 1 version of this kit; after cuts and rewrites it gives none.</p>
-  <p class="lead">The same day an agent on another model family (OpenAI's) tried to overturn the nine product facts in the research table: six held, two were narrowed to what their source shows, one could not be checked from public pages.</p>
-  <p class="lead">What none of this catches: a false sentence with no number and no flagged word. The copy was written and reviewed by one model family, and no annuity agent has read it.</p>
-  <p class="lead">The rules, the program and the record of this run: <a href="https://github.com/patraianton/ag-growth-rules">github.com/patraianton/ag-growth-rules</a> (<a href="https://github.com/patraianton/ag-growth-rules/blob/HEAD/process/runs/2026-10-02-ag-kit/README.md">this run</a>).</p>
+  <h2>To confirm with the team</h2>
   <div class="card">
-    <div class="find"><div class="n">1</div><p><b>Step one: what the CRM does today.</b> I went through the public record: all 93 help-center articles, the 103 videos and the Shorts on AG's channel, 166 site pages and 65 snapshots of the pricing page since 2019, 54 posts and articles by the company, its founder, and its CTO. Full audit, every claim linked to its source: <a href="https://patraianton.github.io/annuities-genius-crm-launch-kit/crm-audit.html">crm-audit.html</a>. What it showed: AG has had a CRM since 2019. The Client Profile is a case file: reports, illustrations, documents, notes, the E-App. The conversation leaves it. In the GrantAI 2.0 demo the email opens in the agent's own mail app, and the call happens off-platform: <i>"after I send it, what do I do next? I guess I'll call the guy and let him know there's something cool waiting in his mailbox."</i> Texting exists for website leads, from one shared number; calls, a calendar, and inbox sync don't. So the launch says "the conversation stays on the case", not "we built a CRM"; texting moves from website leads to every client.</p></div>
-    <div class="find"><div class="n">2</div><div><p><b>Step two: what GoHighLevel users blame it for, by the six components in the brief.</b> GoHighLevel is the tool the brief names. I read 3,803 public records about it (reviews, posts, feature requests) from eight source types and sorted 1,927 complaints by module (counts are close, not exact: two lanes read the same review sites): <a href="https://patraianton.github.io/annuities-genius-crm-launch-kit/ghl-complaints.html">ghl-complaints.html</a>. Agents meet it under other names (Agent CRM, Quility's Switchboard), so the copy names no competitor; it answers the complaints component by component.</p>
-<table class="fm"><tr><th>In the brief</th><th>AG today (step one)</th><th>What GoHighLevel users blame it for (step two)</th><th>Release one</th><th>Where it's said</th></tr>
-<tr><td class="k">Emails</td><td>GrantAI drafts the email; "Open in Mail" hands it to the agent's own mail app. No inbox sync, no email log on the case.</td><td>92 records. Mail lands in spam from shared sending addresses; inbox sync "broken for months"; "what good is a CRM… if you can't get into their main inbox?"</td><td>[Send from your own address.] Every email saved on the case; replies are a question for the CTO.</td><td>Email, bullet 1; "Connect your email once".</td></tr>
-<tr><td class="k">Phone calls</td><td>No telephony. GrantAI writes the call script; a recording can be uploaded by hand; the 2020–2023 voice recorder is gone.</td><td>168. Calls don't ring or drop mid-call; buying or porting a number takes weeks; outbound shows "Spam Likely".</td><td>Call from your computer; the call is on the case when you hang up. A local number, or [bring your office line over].</td><td>Email, bullet 2; Getting started, step 2.</td></tr>
-<tr><td class="k">Messages</td><td>Chat with website leads only, from one shared number for all agents.</td><td>210. Texting registration (A2P 10DLC) rejected or stuck for weeks, licensed insurance and finance professionals refused; notifications missing or hours late; conversations can't be exported.</td><td>Text any client [from your own number] once it clears registration. Every text on the case.</td><td>Email, bullet 2 and step 3; IMO note.</td></tr>
-<tr><td class="k">Meetings</td><td>A Calendly button on the agent's website; no calendar of its own.</td><td>50. Clients get the wrong time (time zones); Google and Outlook sync fails; double bookings.</td><td>Booking link from the case; the meeting and its reminder saved on it.</td><td>Email, bullet 2; webinar 0:17.</td></tr>
-<tr><td class="k">Quotes</td><td>The core of the product; the analysis and reports made for a client save to its profile on their own.</td><td>One record in 1,927 asks how to bring a quoting engine in: GoHighLevel has no quoting.</td><td>Nothing new. The quote is already here, so the conversation moves to it, not the other way around.</td><td>The message; side note 2.</td></tr>
-<tr><td class="k">E-Apps</td><td>FireLight, switched on at the IMO level; Start E-App prefilled.</td><td>None about e-applications.</td><td>The E-App stays the last step of the same timeline.</td><td>Email, timeline bullet; webinar 0:17; the post.</td></tr>
-<tr><td class="k">Across all six</td><td>-</td><td>Support 309; money (billing, fees, cancellation) 271; mobile app 216; learning curve 147; data lock-in 47.</td><td>Price of calls and texts stated before you turn them on. Export and support: questions for AG (To confirm). Mobile: AG has no app at all (question 4).</td><td>The email's plan line; webinar Q&amp;A; To confirm.</td></tr>
-</table>
-<p>Users blame the company before the features: support and billing are 30% of all complaints, and the quote and the E-App, the two things AG already has on the case, barely appear.</p></div></div>
-    <div class="find"><div class="n">3</div><p><b>Step three: who reads it.</b> The team described how its users split, and the agent portrait I built from 155 Reddit threads, about 60 insurance-forum threads, 769 Indeed reviews, and 98 IMO sites matched it: self-paying agents, IMO-sourced agents, and the IMO's Case Design desk. What it changed: one email with a segmented send instead of three, the note to IMO desks a week ahead, the hook on AG's own "Open in mail" moment, and the rule that every feature line says where it's saved, because, as one team lead put it in an r/InsuranceAgent thread, <i>"A CRM that's 60% current is worse than a spreadsheet everyone trusts."</i></p></div>
-    <div class="find"><div class="n">4</div><p><b>Step four: how AG speaks.</b> I read AG's own launches: the GrantAI 2.0 webinar, the blog, the LinkedIn showcase page. Their launch copy runs the pain, "So, we fixed it", three to six bullets, where to find it, the plan line, one call to action, and "You stay in control" is their recurring phrase; their September 29 post opened with "New in Annuities Genius:"; their GrantAI 2.0 launch was titled "from Lead to Close". All four pieces follow that, so the launch reads as AG, not as a new voice.</p></div>
-    <details class="src"><summary>Sources</summary>AG blog (June 2025 "Centralized Workflow", April 2026 "Case Sharing &amp; Case Design Queue", October 2025 "Meet GrantAI", September 2026 "Connect Annuities Genius to your AI app"), help center (Integrations, Case Sharing, Personal Website, Team Activity), GrantAI 2.0 webinar, March 2026 (YouTube recording, auto-captions), AG LinkedIn showcase page; r/InsuranceAgent and insurance-forums.com CRM threads 2023–2026; Wealthbox and Redtail pricing pages, help articles, integration pages, T3 2026 survey; GoHighLevel pricing page, Trustpilot reviews, G2 reviews, Agent CRM; Integrity and Quility platform pages; FCC/TCPA 2025, Twilio A2P 10DLC docs, Google OAuth verification policy, FINRA books-and-records rules.</details>
-  </div>
-
-  <div class="grid g2" style="margin-top:14px">
-    <div class="card">
-      <h3>How we'd know it worked</h3>
-      <ul class="plain">
-        <li>The launch number: the share of new cases with a client message sent from AG.</li>
-        <li>We run our own funnel on it first: every Wednesday attendee becomes a client in our AG account and gets the same email-and-call follow-up from it. If webinar-to-trial doesn't move, the promise isn't ready.</li>
-        <li>IMO side: share of Case Design requests that arrive with a conversation attached.</li>
-        <li>Money: seat retention of agents who message clients from AG vs. agents on the same plan and tenure who don't.</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Four questions before this ships</h3>
-      <ol class="plain">
-        <li>I've assumed retention: keep solo and IMO-sourced agents from paying for a second tool. If the CRM's real job is moving IMO desks onto more seats, the plan flips: the IMO note becomes the lead piece, and calling and texting become the Enterprise upgrade rather than part of every plan. Which is it? And every plan, or Prime+ and up? In 2023-2025 in-platform texting sat on the mid and upper plans only, and Client Management left Starter in June 2026.</li>
-        <li>Which of our IMO partners hand their agents their own CRM, and will they see this as help or as competition? My default: brief every IMO a week ahead and offer the co-signed email. Any IMO that sees competition gets a founder call first, and its agents wait until it agrees.</li>
-        <li>How many of our agents pay for GoHighLevel under any name? Cancel reasons and one poll question at the webinar would tell us. If few, this launch carries the year; if many, a switch campaign starts the week after launch, with a CSV import (AG has none today) and a switch offer.</li>
-        <li>GoHighLevel's third-largest complaint is its mobile app, and AG has no app at all. Do calls and texts need a phone app in release one, or does the browser carry it until release two?</li>
-      </ol>
-    </div>
-  </div>
-
-  <div class="card" style="margin-top:14px">
-    <h3>To confirm with the team</h3>
-    <p class="lead" style="margin-bottom:10px">Everything marked in the pieces above, in one place.</p>
+    <p class="lead" style="margin-bottom:10px">Everything marked in the pieces above (a dotted underline on the page, square brackets in the markdown), in one place.</p>
     <div class="grid g2">
       <div><h4 class="ch">Product</h4><ul class="plain">
         <li>The feature name <b>Client Conversations</b> and where it sits (open any client → Case → Client Conversations): my proposal for release one.</li>
         <li>Do client replies come back to the case? That needs inbox sync; for Gmail, Google's yearly security assessment (several weeks).</li>
-        <li>Direct email send from GrantAI: announced on the February 13, 2026 webinar ("you can send emails from here now"), not visible in later demos or the help center. If it shipped, the "Open in mail" hook changes.</li>
+        <li>Direct email send from GrantAI: announced on the February 13, 2026 webinar, not visible in later demos or the help center. If it shipped, the "Open in mail" hook changes.</li>
         <li>Request Case Design: the agent picks which emails and call notes go with the request.</li>
-        <li>Reminders: tasks with a due date and a repeat appear in a partner's May 2025 video and nowhere in the 2026 materials. Do they still exist, and can GrantAI's follow-ups become them?</li>
-        <li>Team Activity shows which designed cases got a follow-up (conversation data inside Team Activity).</li>
+        <li>Reminders, seen in a partner's May 2025 video: do they still exist, and can GrantAI's follow-ups become them?</li>
+        <li>Team Activity shows which designed cases got a follow-up.</li>
         <li>Agency-level switch: the IMO decides whether calling and texting are on for its account, and who pays.</li>
       </ul></div>
       <div><h4 class="ch">Setup and money</h4><ul class="plain">
         <li>Bringing an existing office line over: porting time to confirm; the email promises no date.</li>
-        <li>Calling: AG has no telephony today, and the in-app voice recorder of 2020–2023 is gone. Calling at launch is the heaviest build in this kit.</li>
-        <li>Texting from a number per agent: today every text goes out from one shared number, (225) 535-4832. A number per agent means an SMS provider and A2P 10DLC registration for each. Who files it, AG or the agent? Twilio's figure is up to 5 business days per campaign.</li>
-        <li>Pricing: email and meetings in every plan; calls and texts with N minutes and N texts included, then per minute and per text. My proposal, not AG's price list; which plans get it is question 1.</li>
+        <li>Calling: AG has no telephony today; calling at launch is the heaviest build in this kit.</li>
+        <li>Texting from a number per agent: today every text goes out from one shared number, (225) 535-4832.</li>
+        <li>Pricing: email and meetings in every plan; calls and texts with N minutes and N texts included, then per minute and per text. My proposal, not AG's price list. Every plan, or Prime+ and up?</li>
         <li>The webinar offer for a case built live, and the attendee offer at 0:22.</li>
       </ul></div>
       <div><h4 class="ch">Promises AG would be making: questions for AG's compliance owner and founder</h4><ul class="plain">
         <li>Data use: can AG tell agents that their clients and conversations stay out of marketing and lead generation, are not sold, and are not shared with carriers or other agencies?</li>
         <li>Texting: how does the product record a client's yes, how do existing clients give it, and what happens when a client opts out?</li>
-        <li>Recording calls: off by default for the agent, or set by the agency? One rule, printed the same in every piece.</li>
+        <li>Recording calls: off by default for the agent, or set by the agency?</li>
         <li>Texting number: is it registered in each agent's name, and does AG file it?</li>
         <li>Retention: how long is each message kept, and can it be exported for audits?</li>
-        <li>Leaving: what goes with an agent who leaves, and who owns the book? About 47 of the 1,927 complaints in the study are about getting your own data out.</li>
+        <li>Leaving: what goes with an agent who leaves, and who owns the book?</li>
         <li>The agents' launch email can go out co-signed by the IMO, or be handed to the IMO to send.</li>
-        <li>Support: does a person answer 949-600-7707? Support is the most frequent complaint about the tool in the brief.</li>
+        <li>Support: does a person answer 949-600-7707?</li>
       </ul></div>
       <div><h4 class="ch">People</h4><ul class="plain">
         <li>David Novak's two-minute slot at the webinar (optional).</li>
       </ul></div>
     </div>
+    <p class="srcline">Sources: AG's public record (<a href="https://patraianton.github.io/annuities-genius-crm-launch-kit/crm-audit.html">audit</a>); public complaints about another CRM (<a href="https://patraianton.github.io/annuities-genius-crm-launch-kit/ghl-complaints.html">complaint study</a>); the facts table and the run report (<a href="https://github.com/patraianton/ag-growth-rules/blob/HEAD/templates/facts.md">facts.md</a>, <a href="https://github.com/patraianton/ag-growth-rules/blob/HEAD/process/runs/2026-10-02-ag-kit/README.md">run report</a>); r/InsuranceAgent and insurance-forums.com CRM threads 2023–2026; Wealthbox and Redtail pricing pages and help articles; Twilio A2P 10DLC docs, Google OAuth verification policy, FCC/TCPA 2025, FINRA books-and-records rules.</p>
   </div>
 </section>
 
-<div class="foot">Feature names and flows are my proposal for release one. · Anton Patrai</div>
+<div class="foot">Anton Patrai</div>
 
 </main>
-<script>addEventListener('beforeprint',()=>document.querySelectorAll('details').forEach(d=>d.open=true))</script>
 </body>
 </html>
